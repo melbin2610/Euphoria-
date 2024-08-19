@@ -1,24 +1,69 @@
 import React from 'react'
 import styled from "styled-components";
 import Image1 from "../../assets/images/bg-1.jpg";
+import Image2 from "../../assets/images/bg-2.jpg";
+import Image3 from "../../assets/images/bg-3.jpg";
+
+
+import Carousel from 'react-bootstrap/Carousel';
+
+
 
 
 
 function Banner() {
+
   return (
-    <BannerContainer>
-      <BannerImage bgimage={Image1}>
-      <ContentContainer>
-          <SubHeading>T-shirt / Tops</SubHeading>
-          <Heading>Summer Value Pack</Heading>
-          <SubHeadings>cool / colorful / comfy</SubHeadings>
-          <ButtonContainer>
-          <Button>Shop Now</Button>
-          </ButtonContainer>
-      </ContentContainer>
-      </BannerImage>
-        
-    </BannerContainer>
+    
+    
+    <Carousel interval={3000}  wrap>
+    <Carousel.Item>
+      <BannerContainer>
+        <BannerImage bgimage={Image1}>
+          <ContentContainer>
+            <SubHeading>T-shirt / Tops</SubHeading>
+            <Heading>Summer Value Pack</Heading>
+            <SubHeadings>cool / colorful / comfy</SubHeadings>
+            <ButtonContainer>
+              <Button>Shop Now</Button>
+            </ButtonContainer>
+          </ContentContainer>
+        </BannerImage>
+      </BannerContainer>
+    </Carousel.Item>
+
+    <Carousel.Item>
+      <BannerContainer>
+        <BannerImage bgimage={Image2}>
+          <ContentContainer>
+            <SubHeading>T-shirt / Tops</SubHeading>
+            <Heading>Summer Value Pack</Heading>
+            <SubHeadings>cool / colorful / comfy</SubHeadings>
+            <ButtonContainer>
+              <Button>Shop Now</Button>
+            </ButtonContainer>
+          </ContentContainer>
+        </BannerImage>
+      </BannerContainer>
+    </Carousel.Item>
+    <Carousel.Item>
+      <BannerContainer>
+        <BannerImage bgimage={Image3}>
+          <ContentContainer>
+            <SubHeading>T-shirt / Tops</SubHeading>
+            <Heading>Summer Value Pack</Heading>
+            <SubHeadings>cool / colorful / comfy</SubHeadings>
+            <ButtonContainer>
+              <Button>Shop Now</Button>
+            </ButtonContainer>
+          </ContentContainer>
+        </BannerImage>
+      </BannerContainer>
+    </Carousel.Item>
+    
+  </Carousel>
+ 
+
   )
 }
 
@@ -46,7 +91,8 @@ const Heading = styled.h1`
   color: #ffffff;
   font-size: 78px;
   line-height: 6rem;
-  margin: 18px 0px 40px 0;`
+  margin: 18px 0px 40px 0;
+  width: 64%;`
 const SubHeadings = styled.h5`
   color: #ffffff;
   font-size: 32px;

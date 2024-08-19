@@ -31,8 +31,7 @@ function Deals() {
 
 const Wrapper = styled.div`
    width: 90%;
-    max-width: 1280px;
-    margin-inline: auto;
+margin: 0 auto;
 `
 const DealsContainer = styled.div`
   display: flex;
@@ -42,17 +41,20 @@ const DealsContainer = styled.div`
 `
 const DealsLeft = styled.div`
   background-image: url(${(props) => props.bgimage});
-  width: 48.5%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size: 896px;
-  height: 328px;
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  text-align: left;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 12px;`
+
+    width: 49.5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 1374px;
+    height: 437px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+  
+  `
 
 const ItemContainer = styled.div`
   padding: 0 30px;
@@ -80,17 +82,19 @@ font-size: 15px;`
 
 const DealsRight = styled.div`
 background-image: url(${(props) => props.bgimage});
- width: 48.5%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size: 896px;
-  height: 328px;
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  text-align: left;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 12px;`
+width: 49.5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 1374px;
+    height: 437px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    
+  `
 
 const Explore = styled.h5`
   text-decoration: underline;

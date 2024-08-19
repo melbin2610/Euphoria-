@@ -2,48 +2,66 @@ import React from 'react'
 import styled from 'styled-components'
 import Image1 from "../../assets/images/img-1.jpg"
 
+import Carousel from 'react-bootstrap/Carousel';
+
 function NewArrivals() {
   return (
     <Wrapper>
-    <MainContainer>
+        
+     
+      {/* Carousel Section */}
+      <MainContainer>
         <SubContainer>
-            <BlueBlock></BlueBlock>
-            <Heading>New Arrival</Heading>
+          <BlueBlock></BlueBlock>
+          <Heading>New Arrival</Heading>
         </SubContainer>
         <ArrivalContainer>
-            <ArrivalItems>
+          <Carousel>
+            <Carousel.Item>
+              <ArrivalItems>
                 <ArrivalImg>
-                   <img src={Image1} alt="image" />  
+                  <img src={Image1} alt="Knitted Joggers" />
                 </ArrivalImg>
-                <ArrivalItemsName>knitted joggers</ArrivalItemsName>
-            </ArrivalItems>
-            <ArrivalItems>
+                <ArrivalItemsName>Knitted Joggers</ArrivalItemsName>
+              </ArrivalItems>
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <ArrivalItems>
                 <ArrivalImg>
-                   <img src={Image1} alt="image" />  
+                  <img src={Image1} alt="Knitted Joggers" />
                 </ArrivalImg>
-                <ArrivalItemsName>knitted joggers</ArrivalItemsName>
-            </ArrivalItems>
-            <ArrivalItems>
+                <ArrivalItemsName>Knitted Joggers</ArrivalItemsName>
+              </ArrivalItems>
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <ArrivalItems>
                 <ArrivalImg>
-                   <img src={Image1} alt="image" />  
+                  <img src={Image1} alt="Knitted Joggers" />
                 </ArrivalImg>
-                <ArrivalItemsName>knitted joggers</ArrivalItemsName>
-            </ArrivalItems>
-            <ArrivalItems>
+                <ArrivalItemsName>Knitted Joggers</ArrivalItemsName>
+              </ArrivalItems>
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <ArrivalItems>
                 <ArrivalImg>
-                   <img src={Image1} alt="image" />  
+                  <img src={Image1} alt="Knitted Joggers" />
                 </ArrivalImg>
-                <ArrivalItemsName>knitted joggers</ArrivalItemsName>
-            </ArrivalItems>
+                <ArrivalItemsName>Knitted Joggers</ArrivalItemsName>
+              </ArrivalItems>
+            </Carousel.Item>
+          </Carousel>
         </ArrivalContainer>
-    </MainContainer>
+      </MainContainer>
     </Wrapper>
   )
 }
 const Wrapper = styled.div`
     width: 90%;
-    max-width: 1280px;
-    margin-inline: auto;`
+    margin: 0 auto;
+  `
 const MainContainer = styled.div``
 const SubContainer = styled.div`
     display: flex;
@@ -64,11 +82,12 @@ const  Heading= styled.h2`
 const  ArrivalContainer= styled.div`
     display: flex;
     justify-content: space-between;
-    padding:50px;
-    max-width:1238px;`
+    padding: 50px 0;
+   
+    `
 const  ArrivalItems= styled.div`
-    width: 263px;
-    height: 320px;`
+   
+    `
 const ArrivalImg= styled.div`
     display: block;
     width:100%;
@@ -76,7 +95,7 @@ const ArrivalImg= styled.div`
 
 const ArrivalItemsName= styled.span`
     display:block;
-    margin-top:20px`
+    margin-top:20px;`
 const Img= styled.img``
 
 

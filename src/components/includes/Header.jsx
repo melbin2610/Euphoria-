@@ -54,8 +54,9 @@ function Header() {
 
 const Wrapper = styled.div`
     width: 90%;
-    max-width: 1280px;
-    margin-inline: auto;
+  
+    /* margin-inline: auto; */
+    margin: 0 auto;
     `
 const HeaderContainer = styled.div`
   display: flex;

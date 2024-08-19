@@ -8,6 +8,9 @@ import Men from './components/screens/Men'
 import Women from './components/screens/Women'
 import BransDeal from './components/screens/BransDeal'
 import LimeLight from './components/screens/LimeLight'
+import FeedBack from './components/screens/FeedBack'
+import Footer from './components/includes/Footer'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -22,6 +25,8 @@ function App() {
     <Women/>
     <BransDeal/>
     <LimeLight/>
+    <FeedBack/>
+    <Footer/>
     
    </> 
   )

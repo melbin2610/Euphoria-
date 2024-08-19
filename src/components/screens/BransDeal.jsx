@@ -76,7 +76,7 @@ const LogoGrid = styled.ul`
   justify-content: center;
   list-style: none;
   gap: 20px;
-  #background: #ffffff;
+ background-color: #ffffff;
 `
 const LogoItem = styled.li`
   display: flex;
