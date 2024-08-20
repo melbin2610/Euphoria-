@@ -91,7 +91,7 @@
       "image": "/assets/img-16.jpg",
       "title": "Black Sweatshirt with ....",
       "brand": "Jhanvi’s  Brand",
-      "price": 123.0
+      "price": "$123"
     },
     {
       "id": 18,
@@ -156,7 +156,7 @@
       "comments": 120,
       "sizes": ["XS", "S", "M", "L"],
       "colors": ["#3C4242", "#EDD146", "#EB84B0", "#9C1F35"],
-      "price": 123,
+      "price": "$123",
       "images": [
         "/assets/img-25.jpg",
         "/assets/img-16.jpg",
@@ -172,7 +172,7 @@
       "comments": 120,
       "sizes": ["XS", "S", "M", "L"],
       "colors": ["#3C4242", "#EDD146", "#EB84B0", "#9C1F35"],
-      "price": 123,
+      "price": "$123",
       "images": [
         "/assets/img-25.jpg",
         "/assets/img-16.jpg",
@@ -188,7 +188,7 @@
       "comments": 120,
       "sizes": ["XS", "S", "M", "L"],
       "colors": ["#3C4242", "#EDD146", "#EB84B0", "#9C1F35"],
-      "price": 123,
+      "price": "$123",
       "images": [
         "/assets/img-25.jpg",
         "/assets/img-16.jpg",
@@ -204,7 +204,7 @@
       "comments": 120,
       "sizes": ["XS", "S", "M", "L"],
       "colors": ["#3C4242", "#EDD146", "#EB84B0", "#9C1F35"],
-      "price": 123,
+      "price": "$123",
       "images": [
         "/assets/img-25.jpg",
         "/assets/img-16.jpg",
@@ -218,9 +218,9 @@
       "category": "men",
       "rating": 3.5,
       "comments": 120,
-      "sizes": ["XS", "S", "M", "L"],
+      "sizes": ["XS", "S"],
       "colors": ["#3C4242", "#EDD146", "#EB84B0", "#9C1F35"],
-      "price": 123,
+      "price": "$123",
       "images": [
         "/assets/img-25.jpg",
         "/assets/img-16.jpg",
@@ -233,10 +233,11 @@
       "title": "Printed T-Shirts",
       "category": "men",
       "rating": 3.5,
+      "header":"Raven Hoodie With Black colored Design",
       "comments": 120,
-      "sizes": ["XS", "S", "M", "L"],
+      "sizes": ["XS", "S", "L"],
       "colors": ["#3C4242", "#EDD146", "#EB84B0", "#9C1F35"],
-      "price": 123,
+      "price": "$123",
       "images": [
         "/assets/img-25.jpg",
         "/assets/img-16.jpg",
@@ -250,9 +251,9 @@
       "category": "men",
       "rating": 3.5,
       "comments": 120,
-      "sizes": ["XS", "S", "M", "L"],
+      "sizes": ["XS", "M", "L"],
       "colors": ["#3C4242", "#EDD146", "#EB84B0", "#9C1F35"],
-      "price": 123,
+      "price": "$123",
       "images": [
         "/assets/img-25.jpg",
         "/assets/img-16.jpg",
@@ -268,7 +269,7 @@
       "comments": 120,
       "sizes": ["XS", "S", "M", "L"],
       "colors": ["#3C4242", "#EDD146", "#EB84B0", "#9C1F35"],
-      "price": 123,
+      "price": "$123",
       "images": [
         "/assets/img-25.jpg",
         "/assets/img-16.jpg",
@@ -284,7 +285,7 @@
       "comments": 120,
       "sizes": ["XS", "S", "M", "L"],
       "colors": ["#3C4242", "#EDD146", "#EB84B0", "#9C1F35"],
-      "price": 123,
+      "price": "$123",
       "images": [
         "/assets/img-25.jpg",
         "/assets/img-16.jpg",
@@ -300,7 +301,7 @@
       "comments": 120,
       "sizes": ["XS", "S", "M", "L"],
       "colors": ["#3C4242", "#EDD146", "#EB84B0", "#9C1F35"],
-      "price": 123,
+      "price": "$123",
       "images": [
         "/assets/img-25.jpg",
         "/assets/img-16.jpg",
@@ -316,7 +317,7 @@
       "comments": 120,
       "sizes": ["XS", "S", "M", "L"],
       "colors": ["#3C4242", "#EDD146", "#EB84B0", "#9C1F35"],
-      "price": 123,
+      "price": "$123",
       "images": [
         "/assets/img-25.jpg",
         "/assets/img-16.jpg",
@@ -332,7 +333,7 @@
       "comments": 120,
       "sizes": ["XS", "S", "M", "L"],
       "colors": ["#3C4242", "#EDD146", "#EB84B0", "#9C1F35"],
-      "price": 123,
+      "price": "$123",
       "images": [
         "/assets/img-25.jpg",
         "/assets/img-16.jpg",
@@ -348,7 +349,7 @@
       "comments": 120,
       "sizes": ["XS", "S", "M", "L", "XL"],
       "colors": ["#3C4242", "#EDD146", "#EB84B0", "#9C1F35"],
-      "price": 123,
+      "price": "$123",
       "images": [
         "/assets/img-25.jpg",
         "/assets/img-16.jpg",
@@ -364,7 +365,7 @@
       "comments": 120,
       "sizes": ["XS", "S", "M", "L", "XL"],
       "colors": ["#3C4242", "#EDD146", "#EB84B0", "#9C1F35"],
-      "price": 123,
+      "price": "$123",
       "images": [
         "/assets/img-25.jpg",
         "/assets/img-16.jpg",
@@ -380,7 +381,7 @@
       "comments": 120,
       "sizes": ["XS", "S", "M", "L", "XL"],
       "colors": ["#3C4242", "#EDD146", "#EB84B0", "#9C1F35"],
-      "price": 123,
+      "price": "$123",
       "images": [
         "/assets/img-25.jpg",
         "/assets/img-16.jpg",
@@ -396,7 +397,7 @@
       "comments": 120,
       "sizes": ["XS", "S", "M", "L", "XL"],
       "colors": ["#3C4242", "#EDD146", "#EB84B0", "#9C1F35"],
-      "price": 123,
+      "price": "$123",
       "images": [
         "/assets/img-25.jpg",
         "/assets/img-16.jpg",
@@ -412,7 +413,7 @@
       "comments": 120,
       "sizes": ["XS", "S", "M", "L", "XL"],
       "colors": ["#3C4242", "#EDD146", "#EB84B0", "#9C1F35"],
-      "price": 123,
+      "price": "$123",
       "images": [
         "/assets/img-25.jpg",
         "/assets/img-16.jpg",

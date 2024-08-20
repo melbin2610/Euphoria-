@@ -28,7 +28,7 @@ function Women() {
         </SubContainer>
         <CategoriesContainer>
           {data.map((item)=>(
-               <CategoriesItems to="/item">
+               <CategoriesItems  key={item.id} to={`/single/${item.id}`}>
                <CategoriesImg>
                    <img src={item.image} alt="image" />  
                </CategoriesImg>

@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route>
         <Route path="/" element={<MainPage/>} />
-        <Route path="/item/:id" element={<SinglePage/>} />
+        <Route path="/single/:id" element={<SinglePage/>} />
         </Route>
       </Routes>
     </Router>

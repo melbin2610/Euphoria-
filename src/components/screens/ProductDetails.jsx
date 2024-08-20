@@ -6,6 +6,8 @@ import MyImage3 from '../../assets/images/img-26.jpg';
 import Arrow from '../../assets/images/right-arrow-light.svg';
 
 function ProductDetails({data}) {
+  
+  
   return (
     <Wrapper>
       <MainContainer>
@@ -49,7 +51,7 @@ function ProductDetails({data}) {
                 src={require("../../assets/images/message.svg").default}
               />
             </CommentImgContainer>
-            <CommentSpan>120 comment</CommentSpan>
+            <CommentSpan>{data.comments} comment</CommentSpan>
           </RatingDiv>
 
           <SizeContainer>
@@ -66,21 +68,13 @@ function ProductDetails({data}) {
               </RightArrowDiv>
             </SizeSubDiv>
             <SelectionSize>
-              <Sizes>
-                <Size>XS</Size>
+              {data.sizes.map((item)=>(
+                   <Sizes>
+                <Size>{item}</Size>
+          
               </Sizes>
-              <Sizes>
-                <Size>S</Size>
-              </Sizes>
-              <Sizes>
-                <Size>M</Size>
-              </Sizes>
-              <Sizes>
-                <Size>L</Size>
-              </Sizes>
-              <Sizes>
-                <Size>XL</Size>
-              </Sizes>
+              ))}
+              
             </SelectionSize>
           </SizeContainer>
           <ColorsContainer>
@@ -114,7 +108,7 @@ function ProductDetails({data}) {
               </CartContainer>
             </AddCartDiv>
             <PriceDiv>
-              <Price>$63.00</Price>
+              <Price>{data.price}</Price>
             </PriceDiv>
           </BuyContainer>
           <Divider></Divider>

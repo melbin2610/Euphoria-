@@ -7,6 +7,7 @@ import ProductDetails from './ProductDetails';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
+
 function SinglePage() {
   const { id } = useParams();
   const [data, setData] = useState(null);
@@ -18,6 +19,7 @@ function SinglePage() {
         const product = response.data.productdetails.find(
           (item) => item.id === productId
         );
+
         setData(product)
      
       })
@@ -35,7 +37,7 @@ function SinglePage() {
       <Header />
       <ProductDetails data={data} />
       <ProductDescription data={data} /> {/* Pass data to ProductDescription if needed */}
-      <SimilarProducts category={data.category} /> {/* Pass data category to SimilarProducts if needed */}
+      <SimilarProducts  /> {/* Pass data category to SimilarProducts if needed */}
       <Footer />
     </>
   );

@@ -12,7 +12,7 @@ function Men() {
     axios.get('/data.json')
       .then(response => {
         setData(response.data.categoriesformen  );
-        setfilterData(data.filter(product => product.category === "men"))
+       
    
       })
       .catch(error => {
@@ -30,7 +30,7 @@ function Men() {
         <CategoriesContainer>
         {
           data.map((item)=>(
-            <CategoriesItems  key={item.id}  to={`/item/${item.id}`}>
+            <CategoriesItems  key={item.id}  to={`/single/${item.id}`}>
             <CategoriesImg>
                 <img src={item.image} alt="image" />  
             </CategoriesImg>
