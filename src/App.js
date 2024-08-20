@@ -1,32 +1,23 @@
 import React from 'react'
-import Header from './components/includes/Header'
-import Banner from './components/screens/Banner'
-import Deals from './components/screens/Deals'
-import NewArrivals from './components/screens/NewArrivals'
-import WeMade from './components/screens/WeMade'
-import Men from './components/screens/Men'
-import Women from './components/screens/Women'
-import BransDeal from './components/screens/BransDeal'
-import LimeLight from './components/screens/LimeLight'
-import FeedBack from './components/screens/FeedBack'
-import Footer from './components/includes/Footer'
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+import SinglePage from './components/screens/SinglePage'
+import MainPage from './components/screens/MainPage'
 
 
 function App() {
   return (
    <> 
-    <Header/>
-    <Banner/>
-    <Deals/>
-    <NewArrivals/>
-    <WeMade/>
-    <Men/>
-    <Women/>
-    <BransDeal/>
-    <LimeLight/>
-    <FeedBack/>
-    <Footer/>
+   
+    <Router>
+      <Routes>
+        <Route>
+        <Route path="/" element={<MainPage/>} />
+        <Route path="/item/:id" element={<SinglePage/>} />
+        </Route>
+      </Routes>
+    </Router>
     
    </> 
   )

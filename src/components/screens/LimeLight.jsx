@@ -1,8 +1,22 @@
 import React from 'react'
 import styled from "styled-components";
+import axios from 'axios';
+import { useEffect, useState } from "react";
 import Image1 from "../../assets/images/img-16.jpg"
 
 function LimeLight() {
+  const [data,setData]=useState([])
+  useEffect(() => {
+    axios.get('/data.json')
+      .then(response => {
+        setData(response.data.limelight
+        );
+   
+      })
+      .catch(error => {
+       
+      });
+  }, []);
   return (
    <Wrapper>
       <LimeLightContainer>
@@ -11,94 +25,32 @@ function LimeLight() {
           <Heading>In The Limelight</Heading>
         </Container>
         <CategoriesContainer>
-        <CategoriesItems>
-        <WishlistContainer>
-                  <WishlistImg
-                    src={
-                      require("../../assets/images/wishlist.svg")
-                        .default
-                    }
-                  />
-                </WishlistContainer>
-            <CategoriesImg>
-                <img src={Image1} alt="image" />  
-            </CategoriesImg>
-            <Contents>
-            <Left>
-            <CategoriesItemsName>Black Sweatshirt with ....</CategoriesItemsName>
-            <Text>Jhanvi’s  Brand</Text>
-            </Left>
-            <PriceContainer>
-                    <Price>$123.00</Price>
-                  </PriceContainer>
-            </Contents>      
-        </CategoriesItems>
-        <CategoriesItems>
-        <WishlistContainer>
-                  <WishlistImg
-                    src={
-                      require("../../assets/images/wishlist.svg")
-                        .default
-                    }
-                  />
-                </WishlistContainer>
-            <CategoriesImg>
-                <img src={Image1} alt="image" />  
-            </CategoriesImg>
-            <Contents>
-            <Left>
-            <CategoriesItemsName>Black Sweatshirt with ....</CategoriesItemsName>
-            <Text>Jhanvi’s  Brand</Text>
-            </Left>
-            <PriceContainer>
-                    <Price>$123.00</Price>
-                  </PriceContainer>
-            </Contents>      
-        </CategoriesItems>
-        <CategoriesItems>
-        <WishlistContainer>
-                  <WishlistImg
-                    src={
-                      require("../../assets/images/wishlist.svg")
-                        .default
-                    }
-                  />
-                </WishlistContainer>
-            <CategoriesImg>
-                <img src={Image1} alt="image" />  
-            </CategoriesImg>
-            <Contents>
-            <Left>
-            <CategoriesItemsName>Black Sweatshirt with ....</CategoriesItemsName>
-            <Text>Jhanvi’s  Brand</Text>
-            </Left>
-            <PriceContainer>
-                    <Price>$123.00</Price>
-                  </PriceContainer>
-            </Contents>      
-        </CategoriesItems>
-        <CategoriesItems>
-        <WishlistContainer>
-                  <WishlistImg
-                    src={
-                      require("../../assets/images/wishlist.svg")
-                        .default
-                    }
-                  />
-                </WishlistContainer>
-            <CategoriesImg>
-                <img src={Image1} alt="image" />  
-            </CategoriesImg>
-            <Contents>
-            <Left>
-            <CategoriesItemsName>Black Sweatshirt with ....</CategoriesItemsName>
-            <Text>Jhanvi’s  Brand</Text>
-            </Left>
-            <PriceContainer>
-                    <Price>$123.00</Price>
-                  </PriceContainer>
-            </Contents>      
-        </CategoriesItems>
+          {data.map((item)=>(
+             <CategoriesItems>
+             <WishlistContainer>
+                       <WishlistImg
+                         src={
+                           require("../../assets/images/wishlist.svg")
+                             .default
+                         }
+                       />
+                     </WishlistContainer>
+                 <CategoriesImg>
+                     <img src={item.image} alt="image" />  
+                 </CategoriesImg>
+                 <Contents>
+                 <Left>
+                 <CategoriesItemsName>{item.title}</CategoriesItemsName>
+                 <Text>{item.brand}</Text>
+                 </Left>
+                 <PriceContainer>
+                         <Price>{item.price}</Price>
+                       </PriceContainer>
+                 </Contents>      
+             </CategoriesItems>
+            
+          ))}
+        
         </CategoriesContainer>  
       </LimeLightContainer>
    </Wrapper>

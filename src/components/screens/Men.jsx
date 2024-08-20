@@ -1,8 +1,25 @@
 import React from 'react'
+import axios from 'axios';
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 import Image1 from "../../assets/images/img-5.jpg"
+import { useEffect, useState } from "react";
 
 function Men() {
+  const [data,setData]=useState([])
+  const [filterdata,setfilterData]=useState([])
+  useEffect(() => {
+    axios.get('/data.json')
+      .then(response => {
+        setData(response.data.categoriesformen  );
+        setfilterData(data.filter(product => product.category === "men"))
+   
+      })
+      .catch(error => {
+       
+      });
+  }, []);
+
   return (
     <Wrapper>
         <MenContainer>
@@ -11,13 +28,15 @@ function Men() {
             <Heading>Categories For Men</Heading>
         </SubContainer>
         <CategoriesContainer>
-        <CategoriesItems>
+        {
+          data.map((item)=>(
+            <CategoriesItems  key={item.id}  to={`/item/${item.id}`}>
             <CategoriesImg>
-                <img src={Image1} alt="image" />  
+                <img src={item.image} alt="image" />  
             </CategoriesImg>
             <Contents>
             <Left>
-            <CategoriesItemsName>Shirts</CategoriesItemsName>
+            <CategoriesItemsName>{item.title}</CategoriesItemsName>
             <Text>Explore Now!</Text>
             </Left>
             <ArrowContainer>
@@ -30,143 +49,17 @@ function Men() {
                   </ArrowContainer>
             </Contents>      
         </CategoriesItems>
-        <CategoriesItems>
-            <CategoriesImg>
-                <img src={Image1} alt="image" />  
-            </CategoriesImg>
-            <Contents>
-            <Left>
-            <CategoriesItemsName>Shirts</CategoriesItemsName>
-            <Text>Explore Now!</Text>
-            </Left>
-            <ArrowContainer>
-                    <Arrow
-                      src={
-                        require("../../assets/images/arrow-right.svg")
-                          .default
-                      }
-                    />
-                  </ArrowContainer>
-            </Contents>      
-        </CategoriesItems>
-        <CategoriesItems>
-            <CategoriesImg>
-                <img src={Image1} alt="image" />  
-            </CategoriesImg>
-            <Contents>
-            <Left>
-            <CategoriesItemsName>Shirts</CategoriesItemsName>
-            <Text>Explore Now!</Text>
-            </Left>
-            <ArrowContainer>
-                    <Arrow
-                      src={
-                        require("../../assets/images/arrow-right.svg")
-                          .default
-                      }
-                    />
-                  </ArrowContainer>
-            </Contents>      
-        </CategoriesItems>
-        <CategoriesItems>
-            <CategoriesImg>
-                <img src={Image1} alt="image" />  
-            </CategoriesImg>
-            <Contents>
-            <Left>
-            <CategoriesItemsName>Shirts</CategoriesItemsName>
-            <Text>Explore Now!</Text>
-            </Left>
-            <ArrowContainer>
-                    <Arrow
-                      src={
-                        require("../../assets/images/arrow-right.svg")
-                          .default
-                      }
-                    />
-                  </ArrowContainer>
-            </Contents>      
-        </CategoriesItems>
+          ))
+        }
+        
+
+        
+        
+        
+      
         </CategoriesContainer>
 
-        <CategoriesContainer>
-        <CategoriesItems>
-            <CategoriesImg>
-                <img src={Image1} alt="image" />  
-            </CategoriesImg>
-            <Contents>
-            <Left>
-            <CategoriesItemsName>Shirts</CategoriesItemsName>
-            <Text>Explore Now!</Text>
-            </Left>
-            <ArrowContainer>
-                    <Arrow
-                      src={
-                        require("../../assets/images/arrow-right.svg")
-                          .default
-                      }
-                    />
-                  </ArrowContainer>
-            </Contents>      
-        </CategoriesItems>
-        <CategoriesItems>
-            <CategoriesImg>
-                <img src={Image1} alt="image" />  
-            </CategoriesImg>
-            <Contents>
-            <Left>
-            <CategoriesItemsName>Shirts</CategoriesItemsName>
-            <Text>Explore Now!</Text>
-            </Left>
-            <ArrowContainer>
-                    <Arrow
-                      src={
-                        require("../../assets/images/arrow-right.svg")
-                          .default
-                      }
-                    />
-                  </ArrowContainer>
-            </Contents>      
-        </CategoriesItems>
-        <CategoriesItems>
-            <CategoriesImg>
-                <img src={Image1} alt="image" />  
-            </CategoriesImg>
-            <Contents>
-            <Left>
-            <CategoriesItemsName>Shirts</CategoriesItemsName>
-            <Text>Explore Now!</Text>
-            </Left>
-            <ArrowContainer>
-                    <Arrow
-                      src={
-                        require("../../assets/images/arrow-right.svg")
-                          .default
-                      }
-                    />
-                  </ArrowContainer>
-            </Contents>      
-        </CategoriesItems>
-        <CategoriesItems>
-            <CategoriesImg>
-                <img src={Image1} alt="image" />  
-            </CategoriesImg>
-            <Contents>
-            <Left>
-            <CategoriesItemsName>Shirts</CategoriesItemsName>
-            <Text>Explore Now!</Text>
-            </Left>
-            <ArrowContainer>
-                    <Arrow
-                      src={
-                        require("../../assets/images/arrow-right.svg")
-                          .default
-                      }
-                    />
-                  </ArrowContainer>
-            </Contents>      
-        </CategoriesItems>
-        </CategoriesContainer>
+     
         </MenContainer>
     </Wrapper>
   )
@@ -193,13 +86,16 @@ const  Heading= styled.h2`
     font-size : 34px;
     font-weight:600;`
 const CategoriesContainer=styled.div`
-    display: flex;
-    justify-content: space-between;
-    padding:50px;
-    max-width:1240px;`
-const  CategoriesItems= styled.div`
+    display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+            grid-template-rows: repeat(2, 1fr); /* 2 equal rows, each 100px high */
+            gap: 10px; 
+           
+   `
+const  CategoriesItems= styled(Link)`
     width: 270px;
-    height: 451px;`
+    height: 451px;
+    margin-top: 40px;`
 const CategoriesImg= styled.div`
     display: block;
     width:100%;
