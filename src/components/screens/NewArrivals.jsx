@@ -56,8 +56,9 @@ function NewArrivals() {
 }
 
 const Wrapper = styled.div`
-    width: 90%;
-    margin: 0 auto;
+     width: 90%;
+    max-width: 1280px;
+    margin-inline: auto;
 `;
 
 const MainContainer = styled.div``;
