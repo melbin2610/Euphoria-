@@ -62,16 +62,19 @@ height: 639px;`
 const ContentContainer = styled.div`
 padding: 100px 85px 0;
 text-align: left;`
-const Heading = styled.h3`
+const Heading = styled.h1`
 font-size: 34px;
 color: #ffffff;
 font-weight: 800;
 line-height: 50px;
 margin: 70px 0 27px 0;`
-const Paragraph = styled.p`
-font-size: 16px;
+const Paragraph = styled.h4`
+font-size: 20px;
+font-weight: 300;
+line-height: 24px;
+letter-spacing: 1px;
 color: #ffffff;
-width: 66%;
+width: 100%;
 line-height: 24px;
 margin-bottom: 45px;`
 const ButtonContainer = styled.div`
@@ -83,5 +86,8 @@ display: inline-flex;
 align-items: center;
 cursor: pointer;`
 const Button = styled.span`
-font-size: 14px;
+font-size: 18px;
+font-weight: 600px;
+line-height: 21.6px;
+
 color: #3c4242;`  

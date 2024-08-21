@@ -37,9 +37,11 @@ const DealsContainer = styled.div`
   height: 455px;
   display: flex;
   justify-content: space-between;
-  padding: 50px 0px;
+  padding: 60px 0px;
   margin-top: 50px;
-`
+  @media (max-width: 480px) {
+    padding: 30px 0;
+  }`;
 const DealsLeft = styled.div`
   background-image: url(${(props) => props.bgimage});
 

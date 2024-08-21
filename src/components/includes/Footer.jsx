@@ -1,247 +1,298 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <FooterContainer>
-      <Container>
-        <Wrapper>
-          <MenuContainer>
-            <Menu>
-              <MenuItem className="item1">
-                <MenuList>
-                  <MenuTitle>Need Help</MenuTitle>
-                </MenuList>
-                <MenuList>
-                  <MenuLink href="#">Contact Us</MenuLink>
-                </MenuList>
-                <MenuList>
-                  <MenuLink href="#">Track Order</MenuLink>
-                </MenuList>
-                <MenuList>
-                  <MenuLink href="#">Returns & Refunds</MenuLink>
-                </MenuList>
-                <MenuList>
-                  <MenuLink href="#">FAQ's</MenuLink>
-                </MenuList>
-                <MenuList>
-                  <MenuLink href="#">Career</MenuLink>
-                </MenuList>
-              </MenuItem>
-              <MenuItem className="item2">
-                <MenuList>
-                  <MenuTitle>Company</MenuTitle>
-                </MenuList>
-                <MenuList>
-                  <MenuLink href="#">About Us</MenuLink>
-                </MenuList>
-                <MenuList>
-                  <MenuLink href="#">euphoria Blog</MenuLink>
-                </MenuList>
-                <MenuList>
-                  <MenuLink href="#">euphoriastan</MenuLink>
-                </MenuList>
-                <MenuList>
-                  <MenuLink href="#">Collaboration</MenuLink>
-                </MenuList>
-                <MenuList>
-                  <MenuLink href="#">Media</MenuLink>
-                </MenuList>
-              </MenuItem>
-              <MenuItem className="item3">
-                <MenuList>
-                  <MenuTitle>More Info</MenuTitle>
-                </MenuList>
-                <MenuList>
-                  <MenuLink href="#">Terms and Conditions</MenuLink>
-                </MenuList>
-                <MenuList>
-                  <MenuLink href="#">Privacy Policy</MenuLink>
-                </MenuList>
-                <MenuList>
-                  <MenuLink href="#">Shipping Policy</MenuLink>
-                </MenuList>
-                <MenuList>
-                  <MenuLink href="#">Sitemap</MenuLink>
-                </MenuList>
-              </MenuItem>
-              <MenuItem className="item4">
-                <MenuList>
-                  <MenuTitle>Location</MenuTitle>
-                </MenuList>
-                <MenuList>
-                  <MenuLink href="mailto:support@euphoria.in">support@euphoria.in</MenuLink>
-                </MenuList>
-                <MenuList>
-                  <MenuLink href="#">Eklingpura Chouraha, Ahmedabad Main Road</MenuLink>
-                </MenuList>
-                <MenuList>
-                  <MenuLink href="#">(NH 8- Near Mahadev Hotel) Udaipur, India- 313002</MenuLink>
-                </MenuList>
-              </MenuItem>
-            </Menu>
-          </MenuContainer>
-          <MediaSection>
-            <MediaWrapper>
-              <SocialMediaIconContainer>
-                <Icons>
-                  <MediaLinks>
-                    <SocialMediaIcon>
-                      <Image
-                        src={require("../../assets/images/facebook.svg").default}
-                        alt="facebook"
+    <>
+      <FooterContainer>
+        <Container>
+          <Wrapper>
+            <MenuContainer>
+              <Menu>
+                <MenuItem className="item1">
+                  <MenuList>
+                    <MenuTitle>Need Help</MenuTitle>
+                  </MenuList>
+                  <MenuList>
+                    <MenuLink to="#">Contact Us</MenuLink>
+                  </MenuList>
+                  <MenuList>
+                    <MenuLink to="#">Track Order</MenuLink>
+                  </MenuList>
+                  <MenuList>
+                    <MenuLink to="#">Returns & Refunds</MenuLink>
+                  </MenuList>
+                  <MenuList>
+                    <MenuLink to="#">FAQ's</MenuLink>
+                  </MenuList>
+                  <MenuList>
+                    <MenuLink to="#">Career</MenuLink>
+                  </MenuList>
+                </MenuItem>
+                <MenuItem className="item2">
+                  <MenuList>
+                    <MenuTitle>Company</MenuTitle>
+                  </MenuList>
+                  <MenuList>
+                    <MenuLink to="#">About Us</MenuLink>
+                  </MenuList>{" "}
+                  <MenuList>
+                    <MenuLink to="#">euphoria Blog</MenuLink>
+                  </MenuList>{" "}
+                  <MenuList>
+                    <MenuLink to="#">euphoriastan</MenuLink>
+                  </MenuList>{" "}
+                  <MenuList>
+                    <MenuLink to="#">Collaboration</MenuLink>
+                  </MenuList>
+                  <MenuList>
+                    <MenuLink to="#">Media</MenuLink>
+                  </MenuList>
+                </MenuItem>
+                <MenuItem className="item3">
+                  <MenuList>
+                    <MenuTitle>More Info</MenuTitle>
+                  </MenuList>
+                  <MenuList>
+                    <MenuLink to="#">Term and Conditions</MenuLink>
+                  </MenuList>{" "}
+                  <MenuList>
+                    <MenuLink to="#">Privacy Policy</MenuLink>
+                  </MenuList>{" "}
+                  <MenuList>
+                    <MenuLink to="#">Shipping Policy</MenuLink>
+                  </MenuList>{" "}
+                  <MenuList>
+                    <MenuLink to="#">Sitemap</MenuLink>
+                  </MenuList>
+                </MenuItem>
+                <MenuItem className="item4">
+                  <MenuList>
+                    <MenuTitle>Location</MenuTitle>
+                  </MenuList>
+                  <MenuList>
+                    <MenuLink to="#">support@euphoria.in</MenuLink>
+                  </MenuList>
+                  <MenuList>
+                    <MenuLink to="#">
+                      Eklingpura Chouraha, Ahmedabad Main Road
+                    </MenuLink>
+                  </MenuList>
+                  <MenuList>
+                    <MenuLink to="#">
+                      (NH 8- Near Mahadev Hotel) Udaipur, India- 313002
+                    </MenuLink>
+                  </MenuList>
+                </MenuItem>
+              </Menu>
+            </MenuContainer>
+            <MediaSection>
+              <MediaWrapper>
+                <SocialMediaIconContainer>
+                  <Icons>
+                    <MediaLinks>
+                      <SocialMediaIcon>
+                        <Image
+                          src={require("../../assets/images/facebook.svg").default}
+                          alt="facebook"
+                        />
+                      </SocialMediaIcon>
+                    </MediaLinks>
+                    <MediaLinks>
+                      <SocialMediaIcon>
+                        <Image
+                          src={require("../../assets/images/instagram.svg").default}
+                          alt="facebook"
+                        />
+                      </SocialMediaIcon>
+                    </MediaLinks>
+                    <MediaLinks>
+                      <SocialMediaIcon>
+                        <Image
+                          src={require("../../assets/images/twitter.svg").default}
+                          alt="facebook"
+                        />
+                      </SocialMediaIcon>
+                    </MediaLinks>
+                    <MediaLinks>
+                      <SocialMediaIcon>
+                        <Image
+                          src={require("../../assets/images/linkedin.svg").default}
+                          alt="facebook"
+                        />
+                      </SocialMediaIcon>
+                    </MediaLinks>
+                  </Icons>
+                </SocialMediaIconContainer>
+                <AppContainer>
+                  <Title>Download The App </Title>
+                  <AvalableApp>
+                    <AppIcon>
+                      <AppImage
+                        src={require("../../assets/images/playstore.svg").default}
+                        alt="google play"
                       />
-                    </SocialMediaIcon>
-                  </MediaLinks>
-                  <MediaLinks>
-                    <SocialMediaIcon>
-                      <Image
-                        src={require("../../assets/images/instagram.svg").default}
-                        alt="instagram"
+                    </AppIcon>
+                    <TextContainer>
+                      <P>android app on</P>
+                      <H6
+                        style={{
+                          margin: "0",
+                          fontSize: "18px",
+                          fontWeight: 400,
+                          color: "#ffffff",
+                        }}
+                      >
+                        Google Play
+                      </H6>
+                    </TextContainer>
+                    <AppIcon>
+                      <AppImage
+                        src={require("../../assets/images/phone.svg").default}
+                        alt="google play"
                       />
-                    </SocialMediaIcon>
-                  </MediaLinks>
-                  <MediaLinks>
-                    <SocialMediaIcon>
-                      <Image
-                        src={require("../../assets/images/twitter.svg").default}
-                        alt="twitter"
-                      />
-                    </SocialMediaIcon>
-                  </MediaLinks>
-                  <MediaLinks>
-                    <SocialMediaIcon>
-                      <Image
-                        src={require("../../assets/images/linkedin.svg").default}
-                        alt="linkedin"
-                      />
-                    </SocialMediaIcon>
-                  </MediaLinks>
-                </Icons>
-              </SocialMediaIconContainer>
-              <AppContainer>
-                <Title>Download The App </Title>
-                <AvalableApp>
-                  <AppIcon>
-                    <AppImage
-                      src={require("../../assets/images/playstore.svg").default}
-                      alt="google play"
+                    </AppIcon>
+                    <TextContainer>
+                      <P>Available on the</P>
+                      <H6>App Store</H6>
+                    </TextContainer>
+                  </AvalableApp>
+                </AppContainer>
+              </MediaWrapper>
+            </MediaSection>
+            <CategorySection>
+              <CategoryWrapper>
+                <CategoryTitle>Popular Categories</CategoryTitle>
+                <OptiomButton>
+                  <OptionIcon>
+                    <Arrow
+                      src={require("../../assets/images/arrow-down.svg").default}
+                      alt="shoes"
                     />
-                  </AppIcon>
-                  <TextContainer>
-                    <P>android app on</P>
-                    <H6
-                      style={{
-                        margin: "0",
-                        fontSize: "18px",
-                        fontWeight: 400,
-                        color: "#ffffff",
-                      }}
-                    >
-                      Google Play
-                    </H6>
-                  </TextContainer>
-                  <AppIcon>
-                    <AppImage
-                      src={require("../../assets/images/phone.svg").default}
-                      alt="app store"
-                    />
-                  </AppIcon>
-                  <TextContainer>
-                    <P>Available on the</P>
-                    <H6>App Store</H6>
-                  </TextContainer>
-                </AvalableApp>
-              </AppContainer>
-            </MediaWrapper>
-          </MediaSection>
-          <CategorySection>
-            <CategoryWrapper>
-              <CategoryTitle>Popular Categories</CategoryTitle>
-              <OptiomButton>
-                <OptionIcon>
-                  <Arrow
-                    src={require("../../assets/images/arrow-down.svg").default}
-                    alt="categories"
-                  />
-                </OptionIcon>
-              </OptiomButton>
-            </CategoryWrapper>
-          </CategorySection>
-          <BottomWrapper>
-            <Info>
-              Copyright © 2023 Euphoria Folks Pvt Ltd. All rights reserved.
-            </Info>
-          </BottomWrapper>
-        </Wrapper>
-      </Container>
-    </FooterContainer>
+                  </OptionIcon>
+                </OptiomButton>
+              </CategoryWrapper>
+            </CategorySection>
+            <BottomWrapper>
+              <Info>
+                Copyright © 2023 Euphoria Folks Pvt Ltd. All rights reserved.
+              </Info>
+            </BottomWrapper>
+          </Wrapper>
+        </Container>
+      </FooterContainer>
+    </>
   );
 }
-
 const FooterContainer = styled.footer`
   background: #3c4242;
   gap: 0px;
-  opacity: 1;
+  opacity: 0px;
 `;
 
 const Container = styled.div`
   width: 90%;
   margin: 0 auto;
   max-width: 1280px;
-  padding: 60px 0;
+  padding: 40px 0;
+  @media (max-width: 980px) {
+    padding: 30px 0;
+  }
 `;
 const Wrapper = styled.div``;
 const MenuContainer = styled.div`
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   max-width: 1280px;
+  @media (max-width: 980px) {
+    width: 90%;
+  }
 `;
 const Menu = styled.div`
-  width: 100%;
   display: flex;
-  justify-content: space-between;
   gap: 40px;
+  justify-content: space-between;
+  @media (max-width: 980px) {
+    gap: 35px;
+  }
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    gap: 20px;
+
+    & > ul:last-child {
+      // width: 63%;
+    }
+  }
+  @media (max-width: 680px) {
+    text-align: center;
+  }
 `;
 const MenuItem = styled.ul`
-  margin-top: 0;
+  margin: 0;
   padding: 0;
   list-style-type: none;
   color: #f6f6f6;
+  @media (max-width: 768px) {
+    width: calc(50% - 10px);
+    }
+  }
 `;
 const MenuList = styled.li``;
 const MenuTitle = styled.h3`
   font-size: 28px;
   font-weight: 700;
   line-height: 61.99px;
+  margin: 0;
+
+  @media (max-width: 980px) {
+    font-size: 24px;
+  }
+  @media (max-width: 480px) {
+    font-size: 22px;
+  }
 `;
-const MenuLink = styled.a`
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 39.04px;
+const MenuLink = styled(Link)`
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 42px;
   text-decoration: none;
   color: #f6f6f6;
+  @media (max-width: 680px) {
+    line-height: 32px;
+    font-size: 14px;
+    text-align: left;
+  }
 `;
 const MediaSection = styled.div`
   border-bottom: 1px solid #bebcbd;
 `;
 const MediaWrapper = styled.div`
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   max-width: 1280px;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 50px;
+  padding: 30px 0;
+  @media (max-width: 680px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 const SocialMediaIconContainer = styled.div`
   display: flex;
+  @media (max-width: 680px) {
+    justify-content: center;
+  }
 `;
 const Icons = styled.div`
   display: flex;
   align-items: flex-end;
   gap: 20px;
+  @media (max-width: 680px) {
+  }
 `;
-const MediaLinks = styled.div``;
+const MediaLinks = styled(Link)``;
 const SocialMediaIcon = styled.span`
   display: flex;
   justify-content: center;
@@ -255,24 +306,41 @@ const SocialMediaIcon = styled.span`
   }
 `;
 const Image = styled.img``;
-const AppContainer = styled.div``;
+const AppContainer = styled.div`
+  padding-right: 100px;
+  @media (max-width: 768px) {
+    padding-right: 0;
+  }
+`;
 const AvalableApp = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
+
+  & > *:nth-child(2) {
+    margin-right: 25px;
+  }
 `;
 const Title = styled.h2`
+  margin: 0;
+  margin-bottom: 40px;
   font-size: 28.58px;
-  font-weight: 700;
+  font-weight: 600;
   color: #f6f6f6;
+  @media (max-width: 680px) {
+    text-align: center;
+    margin: 20px 0;
+  }
 `;
-const AppIcon = styled.div``;
+const AppIcon = styled(Link)``;
 const AppImage = styled.img`
   width: 100%;
   display: block;
 `;
-const TextContainer = styled.div``;
+const TextContainer = styled(Link)`
+  text-decoration: none;
+`;
 const P = styled.p`
   color: #ffffff;
   margin: 0px;
@@ -290,35 +358,58 @@ const CategorySection = styled.div`
 `;
 
 const CategoryWrapper = styled.div`
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   max-width: 1280px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 980px) {
+    width: 90%;
+  }
 `;
 const CategoryTitle = styled.h2`
   font-size: 28.58px;
-  font-weight: 700;
+  font-weight: 600;
   color: #f6f6f6;
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+  @media (max-width: 680px) {
+    font-size: 18px;
+  }
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
 `;
 const OptiomButton = styled.button`
+  cursor: pointer;
   border: none;
   background: none;
 `;
 const OptionIcon = styled.span``;
-const Arrow = styled.img``;
+const Arrow = styled.img`
+  width: 100%;
+  display: block;
+`;
 const BottomWrapper = styled.div`
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   max-width: 1280px;
 `;
 const Info = styled.p`
-  padding-top: 60px;
+  margin: 0;
+  padding-top: 40px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
   color: #ffffff;
+  @media (max-width: 980px) {
+    padding-top: 30px;
+  }
+  @media (max-width: 680px) {
+    font-size: 14px;
+  }
 `;
 
 export default Footer;

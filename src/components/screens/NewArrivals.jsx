@@ -80,6 +80,8 @@ const Heading = styled.h2`
     color: #3c4242;
     font-size: 34px;
     font-weight: 600;
+    line-height: 33.5px;
+    letter-spacing: 0.16px;
 `;
 
 const ArrivalContainer = styled.div`
@@ -100,6 +102,10 @@ const ArrivalImg = styled.div`
 `;
 
 const ArrivalItemsName = styled.span`
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.16px;
     display: block;
     margin-top: 20px;
 `;

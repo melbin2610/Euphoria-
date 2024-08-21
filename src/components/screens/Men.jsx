@@ -108,13 +108,18 @@ const Contents=styled.div`
 const Left =styled.div``
 const CategoriesItemsName= styled.p`
     font-weight: 700;
+    font-size: 17.88px;
+    line-height: 27.93px;
+    letter-spacing: .064px;;
     color: #2a2f2f;
     margin: 0;
     margin-bottom: 3px;
     display:block;
     margin-top:20px;`
 const Text = styled.p`
-    font-size: 12px;
+    font-size: 13.41px;
+    font-weight: 500;
+    line-height: 27.93px;
     color: #7f7f7f;
     margin: 0;
 `
