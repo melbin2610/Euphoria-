@@ -85,29 +85,78 @@ const ContentContainer = styled.div`
 const SubHeading = styled.h5`
   color: #ffffff;
   font-size: 32px;
-  font-weight: lighter;
-  margin: 18px 0px 40px 0;`
+  font-weight: 500;
+  line-height: 37.77px;
+  letter-spacing: 0.16px;
+  margin: 18px 0px 40px 0;
+  @media all and (max-width: 540px) {
+    font-size: 15px;
+    line-height: 30px;
+  }
+  @media all and (max-width: 360px) {
+    font-size: 12px;
+    line-height: 40px;
+  }`;
 const Heading = styled.h1`
   color: #ffffff;
   font-size: 78px;
-  line-height: 6rem;
+  font-weight: 800;
+  line-height: 93.62px;
+  letter-spacing: 0.31px;
   margin: 18px 0px 40px 0;
-  width: 64%;`
-const SubHeadings = styled.h5`
+  width: 93%;
+  @media all and (max-width: 1080px) {
+    font-size: 66px;
+  }
+  @media all and (max-width: 780px) {
+    
+    font-size: 42px;
+    line-height: 65px;
+  }
+  @media all and (max-width: 540px) {
+    font-size: 28px;
+    line-height: 45px;
+  }
+  @media all and (max-width: 360px) {
+    font-size: 20px;
+    line-height: 40px;
+  }
+  `;
+const SubHeadings = styled.h4`
   color: #ffffff;
   font-size: 32px;
-  font-weight: lighter;
-  margin: 18px 0px 40px 0;`
+  font-weight: 500;
+  line-height: 47.21px;
+  letter-spacing: 0.31px;
+  margin: 18px 0px 40px 0;
+  @media all and (max-width: 780px) {
+    font-size: 22px;
+  }
+  @media all and (max-width: 540px) {
+    font-size: 15px;
+    line-height: 30px;
+  }
+  @media all and (max-width: 360px) {
+    font-size: 10px;
+    line-height: 40px;
+  }`;
 const ButtonContainer = styled.div`
   padding: 16px 72px;
   background: #ffffff;
   display: inline-block;
   border-radius: 8px;
-  cursor: pointer;`
+  cursor: pointer;
+  @media all and (max-width: 780px) {
+    padding: 8px 17px;
+  }`;
 const Button = styled.span`
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: 700;
   color: #3c4242;
-  font-weight: 600;`
+  font-weight: 600;
+  @media all and (max-width: 780px) {
+    font-size: 12px;
+  }`;
 
 
 

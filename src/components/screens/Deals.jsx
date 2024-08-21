@@ -34,6 +34,7 @@ const Wrapper = styled.div`
     max-width: 1280px;
     margin-inline: auto;`
 const DealsContainer = styled.div`
+  height: 455px;
   display: flex;
   justify-content: space-between;
   padding: 50px 0px;
@@ -42,11 +43,10 @@ const DealsContainer = styled.div`
 const DealsLeft = styled.div`
   background-image: url(${(props) => props.bgimage});
 
-    width: 49.5%;
+    width: 49%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: 1374px;
-    height: 437px;
+    background-size: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -59,34 +59,38 @@ const DealsLeft = styled.div`
 const ItemContainer = styled.div`
   padding: 0 30px;
   margin-top: 40px;`
-  const Text = styled.h5`
-  font-family: "poppinsbold";
-  font-size: 16px;
+  const Text = styled.h6`
+  font-weight: 800;
+  line-height: 30.07px;
+  letter-spacing: 0.25px;
+  font-size: 18px;
   color: #ffffff;
   margin: 29px 0 0 0;`
 
   
-const Heading = styled.h3`
-font-family: "poppinsbold";
-font-size: 40px;
+const Heading = styled.h2`
+font-size: 34px;
+font-weight: 800;
+line-height: 45.1px;
 color: #ffffff;
 width: 70%;
 margin: 15px 0 15px 0;
 line-height: 45.1px;`
 
-const Offer = styled.span`
-font-family: "poppinsregular";
+const Offer = styled.h3`
+font-weight: 500;
+line-height: 25.06px;
+letter-spacing: 0.25px;
 color: #ffffff;
-font-size: 15px;`
+font-size: 16px;`
 
 
 const DealsRight = styled.div`
-background-image: url(${(props) => props.bgimage});
-width: 49.5%;
+    background-image: url(${(props) => props.bgimage});
+    width: 49%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: 1374px;
-    height: 437px;
+    background-size: 788px;
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -96,11 +100,11 @@ width: 49.5%;
     
   `
 
-const Explore = styled.h5`
+const Explore = styled.h6`
   text-decoration: underline;
-  font-family: "poppinsregular";
   color: #ffffff;
-  font-size: 18px;
+  font-size: 20px;
+  line-height: 30.13px;
   margin: 20px 0 0 0;
   text-underline-offset: 5px;
   cursor: pointer;`

@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import React, { useState, useEffect } from "react";
+import styled from "styled-components";
 import close from "../../assets/images/close.svg";
 import menubar from "../../assets/images/menu-bar.svg";
 
@@ -29,7 +29,7 @@ const Header = () => {
             />
           </LogoContainer>
           <Categories>
-            <ItemShop>Shop</ItemShop>
+            <Items>Shop</Items>
             <Items>Men</Items>
             <Items>Women</Items>
             <Items>Combos</Items>
@@ -70,13 +70,28 @@ const Header = () => {
               <MenuList>
                 <LinkItem>
                   <Status>
-                    <Item>Account</Item>
+                    <Item>Shop</Item>
+                  </Status>
+                  <Status>
+                    <Item>Men</Item>
+                  </Status>
+                  <Status>
+                    <Item>Women</Item>
+                  </Status>
+                  <Status>
+                    <Item>Combos</Item>
+                  </Status>
+                  <Status>
+                    <Item>Joggers</Item>
                   </Status>
                   <Status>
                     <Item>Wishlist</Item>
                   </Status>
                   <Status>
-                    <Item>Your Cart</Item>
+                    <Item>Account</Item>
+                  </Status>
+                  <Status>
+                    <Item>Cart</Item>
                   </Status>
                 </LinkItem>
                 <CloseBar onClick={toggleMenu}>
@@ -94,19 +109,15 @@ const Header = () => {
 export default Header;
 
 const Wrapper = styled.div`
-    width: 90%;
-    max-width: 1280px;
-    margin-inline: auto;
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
 `;
 const Headers = styled.div`
   display: flex;
   align-items: center;
-  height: 108px;
   padding: 18px 0;
   justify-content: space-between;
-  @media all and (max-width: 1280px) {
-    
-  }
   @media all and (max-width: 540px) {
     padding: 8px 0;
   }
@@ -123,12 +134,12 @@ const Logo = styled.img`
   width: 100%;
 `;
 const Categories = styled.div`
-  max-width: 483px;
-  max-height: 26px;
   display: flex;
   align-items: center;
-  gap: 40px;
- 
+  gap: 3rem;
+  @media all and (max-width: 1280px) {
+    gap: 20px;
+  }
   @media all and (max-width: 1080px) {
     gap: 24px;
   }
@@ -144,7 +155,6 @@ const Items = styled.li`
   font-weight: 500;
   cursor: pointer;
   color: #807d7e;
-  line-height: 26.4px;
   @media all and (max-width: 1080px) {
     font-size: 15px;
   }
@@ -156,23 +166,6 @@ const Items = styled.li`
     color: #3c4242;
   }
 `;
-const ItemShop = styled.li`
-  font-size: 22px;
-  font-weight: 700;
-  cursor: pointer;
-  color: #807d7e;
-  line-height: 26.4px;
-  @media all and (max-width: 1080px) {
-    font-size: 15px;
-  }
-  @media all and (max-width: 768px) {
-    font-size: 12px;
-  }
-  &:hover {
-    font-weight: 700;
-    color: #3c4242;
-  }
-`
 const RightDiv = styled.div`
   display: flex;
   align-items: center;
@@ -185,18 +178,16 @@ const Form = styled.div`
   display: flex;
 `;
 const SearchContainer = styled.div`
-
-  width: 267px;
-  height: 44px;
   border-radius: 8px;
-  margin-right: -130px;
   background-color: #F6F6F6;
   display: flex;
   align-items: center;
   padding: 12px 20px;
   gap: 12px;
-  
- 
+  @media all and (max-width: 1280px) {
+    background-color: white;
+    padding: 12px 0;
+  }
   @media all and (max-width: 1080px) {
     gap: 0;
   }
@@ -208,8 +199,6 @@ const SearchContainer = styled.div`
   }
 `;
 const SearchImgContainer = styled.div`
-  width: 100%;
-
   @media all and (max-width: 1080px) {
     width: 12px;
   }
@@ -225,12 +214,12 @@ const StyledInput = styled.input`
   background-color: #F6F6F6;
   border: none;
   padding: 6px 5px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19.2px;
-  align-items: center;
+  font-size: 14px;
   color: #807d7e;
- 
+  @media all and (max-width: 1280px) {
+    background-color: white;
+    font-size: 12px;
+  }
   @media all and (max-width: 1080px) {
     width: 90px;
   }
@@ -244,32 +233,34 @@ const StyledInput = styled.input`
 const RightContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: 9px;
- 
+  gap: 2rem;
+  @media all and (max-width: 1280px) {
+    gap: 1rem;
+  }
+  @media all and (max-width: 640px) {
+    display: none;
+  }
 `;
 const ImageContainer = styled.div`
   background-color: #F6F6F6;
   cursor: pointer;
-  width: 44px;
-  height: 44px;
-  border-radius: 8px;
-  padding: 12px;
-  gap: 12px;
-
+  width: 18px;
+  @media all and (max-width: 1280px) {
+    width: 16px;
+  }
 `;
 const Wishlist = styled.img`
-  
   display: block;
   width: 100%;
- `;
+`;
 const Account = styled.img`
   display: block;
   width: 100%;
- `;
+`;
 const Cart = styled.img`
   display: block;
   width: 100%;
- `;
+`;
 
 const MenuBar = styled.div`
   display: none;

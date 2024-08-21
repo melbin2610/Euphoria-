@@ -4,14 +4,31 @@ import MyImage1 from '../../assets/images/img-25.jpg';
 import MyImage2 from '../../assets/images/img-16.jpg';
 import MyImage3 from '../../assets/images/img-26.jpg';
 import Arrow from '../../assets/images/right-arrow-light.svg';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import ArrowRight from '../../assets/images/arrowup.svg';
+
+
 
 function ProductDetails({data}) {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+  };
   
   
   return (
     <Wrapper>
       <MainContainer>
         <SliderContainer>
+           <Slider {...settings}>
           {
             data.images.map((item)=>(
               <SliderImageDiv>
@@ -21,8 +38,7 @@ function ProductDetails({data}) {
 
             ))
           }
-        
-       
+          </Slider >
         </SliderContainer>
         <BannerImageContainer>
           <BannerImage>
@@ -35,10 +51,11 @@ function ProductDetails({data}) {
             <Items> <img src={Arrow} alt="image" /></Items>
             <Items>{data.category}</Items>
             <Items><img src={Arrow} alt="image" /></Items>
-            <Items>T{data.title}</Items>
+            <Items>{data.title}</Items>
           </NavContainer>
-          <HeadingContainer>Raven Hoodie With<br />
-            Black colored Design</HeadingContainer>
+          <HeadingContainer>
+            {data.header}
+          </HeadingContainer>
           <RatingDiv>
             <RatingImgContainer>
               <RatingImg
@@ -141,9 +158,9 @@ function ProductDetails({data}) {
               <ShippingContainer>
                 <ShippingsImgContainer>
                   <ShippingsImg
-                    src={
-                      require("../../assets/images/truck.svg").default
-                    }
+                    // src={
+                    //   require("../../assets/images/truck.svg").default
+                    // }
                   />
                 </ShippingsImgContainer>
                 <PaymentText>Free shipping</PaymentText>
@@ -151,10 +168,10 @@ function ProductDetails({data}) {
               <ReturnsContain>
                 <ReturnsImgContainer>
                   <ReturnsImg
-                    src={
-                      require("../../assets/images/Free-Shipping&Returns.svg")
-                        .default
-                    }
+                    // src={
+                    //   require("../../assets/images/Free-Shipping&Returns.svg")
+                    //     .default
+                    // }
                   />
                 </ReturnsImgContainer>
                 <PaymentText>Free Shipping & Returns</PaymentText>
@@ -165,7 +182,66 @@ function ProductDetails({data}) {
       </MainContainer>
     </Wrapper>
   );
+  
 }
+const SampleNextArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <ArrowContainer onClick={onClick}>
+      <Arrowimg src={ArrowRight} />
+    </ArrowContainer>
+  );
+};
+
+const SamplePrevArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <ArrowContainerup onClick={onClick}>
+      <Arrowimg src={ArrowRight} />
+    </ArrowContainerup>
+  );
+};
+
+
+
+const Arrowimg = styled.img`
+ 
+`;
+const ArrowContainer = styled.div`
+ 
+ background: gray;
+ padding: 10px;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  top: 50px;
+  left: 95px;
+`;
+const ArrowContainerup = styled.div`
+    background-color: white;
+    padding: 10px;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  top: 284px;
+  left: 95px;
+  transform: rotate(180deg);
+`;
+
+
+
+
+
 
 const Wrapper = styled.div`
   width: 90%;
@@ -191,6 +267,9 @@ const SliderContainer = styled.div`
 const SliderImageDiv = styled.div`
   width: 64px;
   height: 64px;
+  width: 51% !important;
+    margin: 8px auto !important;
+    display: block !important;
   
   /* This is where the img styles should go */
   img {
