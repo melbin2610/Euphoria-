@@ -152,7 +152,7 @@ const Categories = styled.div`
 `;
 const Items = styled.li`
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   color: #807d7e;
   @media all and (max-width: 1080px) {

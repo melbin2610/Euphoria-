@@ -64,12 +64,14 @@ const Text = styled.p`
   margin: 40px 0;
   font-size: 22px;
   font-weight: 400;
+  line-height: 26.4px;
   text-align: center;
 `;
 const Span = styled.span`
   color: #fbd103;
   font-size: 22px;
   font-weight: 700;
+  line-height: 26.4px;
 `;
 const LogoGrid = styled.ul`
   display: flex;

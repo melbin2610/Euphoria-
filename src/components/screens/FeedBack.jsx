@@ -233,7 +233,7 @@ const Text = styled.p`
   color: #807d7e;
   font-size: 14px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 16.8px;
   letter-spacing: 0.02em;
 `;
 

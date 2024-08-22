@@ -1,8 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import MyImage1 from '../../assets/images/img-25.jpg';
-import MyImage2 from '../../assets/images/img-16.jpg';
-import MyImage3 from '../../assets/images/img-26.jpg';
 import Arrow from '../../assets/images/right-arrow-light.svg';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -27,6 +24,7 @@ function ProductDetails({data}) {
   return (
     <Wrapper>
       <MainContainer>
+        
         <SliderContainer>
            <Slider {...settings}>
           {
@@ -40,11 +38,13 @@ function ProductDetails({data}) {
           }
           </Slider >
         </SliderContainer>
+        <MainImageContainer>
         <BannerImageContainer>
           <BannerImage>
             <img src={data.image} alt="image" />
           </BannerImage>
         </BannerImageContainer>
+        
         <RightSideSection>
           <NavContainer>
             <Items>Shop</Items>
@@ -158,9 +158,9 @@ function ProductDetails({data}) {
               <ShippingContainer>
                 <ShippingsImgContainer>
                   <ShippingsImg
-                    // src={
-                    //   require("../../assets/images/truck.svg").default
-                    // }
+                    src={
+                      require("../../assets/images/truck.svg").default
+                    }
                   />
                 </ShippingsImgContainer>
                 <PaymentText>Free shipping</PaymentText>
@@ -168,10 +168,10 @@ function ProductDetails({data}) {
               <ReturnsContain>
                 <ReturnsImgContainer>
                   <ReturnsImg
-                    // src={
-                    //   require("../../assets/images/Free-Shipping&Returns.svg")
-                    //     .default
-                    // }
+                    src={
+                      require("../../assets/images/Free-Shipping&Returns.svg")
+                        .default
+                    }
                   />
                 </ReturnsImgContainer>
                 <PaymentText>Free Shipping & Returns</PaymentText>
@@ -179,6 +179,7 @@ function ProductDetails({data}) {
             </ShippingandReturn>
           </DetailsDiv>
         </RightSideSection>
+        </MainImageContainer>
       </MainContainer>
     </Wrapper>
   );
@@ -237,21 +238,20 @@ const ArrowContainerup = styled.div`
   left: 95px;
   transform: rotate(180deg);
 `;
-
-
-
-
-
-
 const Wrapper = styled.div`
   width: 90%;
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin-inline: auto;
 `;
 
 const MainContainer = styled.div`
     display:flex;
-    `; // Corrected the typo
+    `;
+ const MainImageContainer = styled.div`
+   display: flex;
+     @media all and (max-width: 1080px) {
+    flex-direction:column ;
+  }   `  ; 
 
 const SliderContainer = styled.div`
   background-color:#f6f6f6;
@@ -262,6 +262,14 @@ const SliderContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 20px;
+  @media all and (max-width: 1080px) {
+    background-color: white;
+    width: 35%;
+  }
+  @media all and (max-width: 480px) {
+    background-color: white;
+    width: 40%;
+  }
 `;
 
 const SliderImageDiv = styled.div`
@@ -282,7 +290,10 @@ const SliderImageDiv = styled.div`
 const BannerImageContainer = styled.div`
     width:520px;
     height: 784px;
-    `
+    @media all and (max-width: 1080px) {
+    width:100% ;
+  }
+    `;
 const BannerImage = styled.div`
 
 img {
@@ -291,7 +302,15 @@ img {
     display: block;
   }`
 const RightSideSection = styled.div`
-    padding:42px;`
+    padding:42px;
+    @media all and (max-width: 1080px) {
+    margin-left:-257px;
+    }
+    @media all and (max-width: 780px) {
+      margin-left:-98px;}
+      @media all and (max-width: 780px) {
+        margin-left:-76px;
+      }`
 const NavContainer = styled.ul`
     margin-left:-34px;
     display:flex;
@@ -299,13 +318,27 @@ const NavContainer = styled.ul`
 const Items = styled.li`
     font-size: 18px;
     color:#807D7E;
+    line-height: 21.6px;
     font-weight:500;
+    @media all and (max-width: 480px) {
+        font-size: 14px;
+      }
     `
 const HeadingContainer = styled.p`
     display: block;
+    color: #3C4242;
     font-size:34px;
     font-weight:600;
-    line-height:48px`;
+    letter-spacing: 0.32px;
+    line-height:47.6px;
+    @media (max-width: 780px) {
+      font-size:22px;
+      line-height:31px;
+  }
+  @media all and (max-width: 480px) {
+        font-size: 20px;
+      }`
+    
 
 const RatingDiv = styled.div`
     
@@ -336,7 +369,8 @@ const CommentImg = styled.img`
   width: 100%;
 `;
 const CommentSpan = styled.span`
-  font-size: 15px;
+  font-size: 18px;
+  line-height: 21.6px;
   color: #807d7e;
   @media all and (max-width: 360px) {
     font-size: 12px;
@@ -360,21 +394,21 @@ const SizeSubDiv = styled.div`
   }
 `;
 const SelectSize = styled.span`
-  font-size: 15px;
-  color: #807d7e;
-  margin-right: 20px;
-  font-family: "poppinsregular";
+  font-size: 18px;
+  color:#3F4646;
+  font-weight: 600;
+  margin-right: 20px; 
   cursor: pointer;
   &:hover {
     color: #3f4646;
-    font-weight: 600;
+    font-weight: 700;
   }
 `;
 const SelectGuide = styled.span`
-  font: 15px;
-  color: #807d7e;
+  font: 18px;
+  color: #807d7e; 
   margin-right: 15px;
-  font-family: "poppinsregular";
+  font-weight: 500;
   cursor: pointer;
 
   &:hover {
@@ -483,6 +517,9 @@ const AddCartDiv = styled.div`
   @media all and (max-width: 1280px) {
     padding: 10px 35px;
   }
+  @media all and (max-width: 780px) {
+    padding: 8px 35px;
+  }
   @media all and (max-width: 480px) {
     padding: 10px 20px;
   }
@@ -502,9 +539,13 @@ const CartImg = styled.img`
 const CartText = styled.p`
   color: #ffffff;
   margin: 0;
-  font-size: 15px;
+  font-weight: 600;
+  font-size: 18px;
   @media all and (max-width: 1280px) {
     font-size: 13px;
+  }
+  @media all and (max-width: 780px) {
+    font-size: 8px;
   }
 `;
 const PriceDiv = styled.div`
@@ -517,8 +558,9 @@ const PriceDiv = styled.div`
   }
 `;
 const Price = styled.p`
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
+  line-height: 21.6px;
   margin: 0;
   @media all and (max-width: 1280px) {
     font-size: 13px;
@@ -546,7 +588,7 @@ const PaymentandSize = styled.div`
   @media all and (max-width: 1280px) {
     flex-wrap: wrap;
     flex-direction: column;
-    gap: 0;
+    gap: 0px;
     align-items: baseline;
     margin-bottom: 0;
   }
@@ -565,8 +607,9 @@ const PaymetImg = styled.img`
   width: 100%;
 `;
 const PaymentText = styled.div`
-  font-size: 14px;
-  font-family: "poppinsregular";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
   color: #3c4242;
 `;
 const SizeFitContainer = styled.div`

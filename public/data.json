@@ -91,28 +91,28 @@
       "image": "/assets/img-16.jpg",
       "title": "Black Sweatshirt with ....",
       "brand": "Jhanvi’s  Brand",
-      "price": "$123"
+      "price": "$123.00"
     },
     {
       "id": 18,
       "image": "/assets/img-17.jpg",
       "title": "line Pattern Black H...",
       "brand": "AS’s  Brand",
-      "price": 37.0
+      "price": "$37.00"
     },
     {
       "id": 19,
       "image": "/assets/img-18.jpg",
       "title": "Black Shorts",
       "brand": "MM’s  Brand",
-      "price": 37.0
+      "price": "$37.00"
     },
     {
       "id": 20,
       "image": "/assets/img-19.jpg",
       "title": "Levender Hoodie with ....",
       "brand": "Nike’s  Brand",
-      "price": 119.0
+      "price": "$119.00"
     }
   ],
 

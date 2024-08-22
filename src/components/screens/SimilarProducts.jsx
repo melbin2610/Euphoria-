@@ -27,8 +27,8 @@ function SimilarProducts() {
             </CategoriesImg>
             <Contents>
             <Left>
-            <CategoriesItemsName>Black Sweatshirt with ....</CategoriesItemsName>
-            <Text>Jhanvi’s  Brand</Text>
+            <CategoriesItemsName>White T-Shirt</CategoriesItemsName>
+            <Text>Priya’s  Brand</Text>
             </Left>
             <PriceContainer>
                     <Price>$13.00</Price>
@@ -49,8 +49,8 @@ function SimilarProducts() {
             </CategoriesImg>
             <Contents>
             <Left>
-            <CategoriesItemsName>Black Sweatshirt with ....</CategoriesItemsName>
-            <Text>Jhanvi’s  Brand</Text>
+            <CategoriesItemsName>Dark Green Sweatshirt....</CategoriesItemsName>
+            <Text>Roboto’s</Text>
             </Left>
             <PriceContainer>
                     <Price>$127.00</Price>
@@ -71,8 +71,8 @@ function SimilarProducts() {
             </CategoriesImg>
             <Contents>
             <Left>
-            <CategoriesItemsName>Black Sweatshirt with ....</CategoriesItemsName>
-            <Text>Jhanvi’s  Brand</Text>
+            <CategoriesItemsName>Levender Sweatshirt ....</CategoriesItemsName>
+            <Text>Jhanvi’s</Text>
             </Left>
             <PriceContainer>
                     <Price>$133.00</Price>
@@ -93,8 +93,8 @@ function SimilarProducts() {
             </CategoriesImg>
             <Contents>
             <Left>
-            <CategoriesItemsName>Black Sweatshirt with ....</CategoriesItemsName>
-            <Text>Jhanvi’s  Brand</Text>
+            <CategoriesItemsName>Urban jacket with white</CategoriesItemsName>
+            <Text>Sagar’s  Brand</Text>
             </Left>
             <PriceContainer>
                     <Price>$79.00</Price>
@@ -124,13 +124,20 @@ line-height: 33.5px;
 `    
 const  Heading= styled.h2`
     color:#3C4242;
-    font-size : 34px;
+    font-size : 28px;
+    line-height: 33.5px;
+    letter-spacing: 0.32px;
     font-weight:600;`
 const CategoriesContainer=styled.div`
     display: flex;
     justify-content: space-between;
     padding:50px;
-    max-width:1280px;`    
+    max-width:1280px;
+    @media all and (max-width: 1280px) {
+    flex-wrap: wrap;}
+    @media all and (max-width: 1280px) {
+      padding:5px;}
+    `;    
 const  CategoriesItems= styled.div`
     position: relative;
     cursor: pointer;
@@ -161,7 +168,8 @@ const Left =styled.div``
 const CategoriesItemsName= styled.p`
     font-size: 16px;
     font-weight: 600;
-    color: #2a2f2f;
+    line-height: 19.2px;
+    color:#3C4242;
     margin: 0;
     margin-bottom: 3px;
     display:block;
@@ -169,11 +177,14 @@ const CategoriesItemsName= styled.p`
 const Text = styled.p`
     font-size: 14px;
     font-weight: 500;
-    color: #7f7f7f;
+    line-height: 16.8px;
+    color: #807D7E;
     margin: 0;
 `
 const PriceContainer= styled.div`
     background-color: #F6F6F6;
+    margin-top: 22px  ;
+    border-radius: 8px;
     width: 83px;
     height:37px;`
 const Price= styled.h5`

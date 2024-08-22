@@ -88,7 +88,7 @@ const Wrapper = styled.div`
   padding: 60px 0;
   display: flex;
   gap: 30px;
-  @media (max-width: 980px) {
+  @media (max-width: 1080px) {
     flex-direction: column;
   }
   @media (max-width: 680px) {
@@ -109,10 +109,10 @@ const BlueBlock = styled.div`
   background-color: #8a33fd;
 `;
 const Heading = styled.h3`
-  font-size: 34px;
+  font-size: 28px;
   font-weight: 600;
   line-height: 33.5px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.32px;
   color: #3c4242;
   @media (max-width: 680px) {
     font-size: 28px;
@@ -130,6 +130,8 @@ const NavigationHeadingContainer = styled.div`
 `;
 const NavigationHeading = styled.div`
   margin-bottom: 20px;
+  font-weight: 500;
+  line-height: 21.6px;
   font-size: 18px;
   @media (max-width: 680px) {
     font-size: 16px;

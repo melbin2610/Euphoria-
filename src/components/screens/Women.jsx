@@ -62,7 +62,7 @@ const Wrapper = styled.div`
     max-width: 1280px;
     margin-inline: auto;`
 const WomenContainer = styled.div`
-    margin-top:25px;`
+    margin-top:76px;`
 const SubContainer = styled.div`
     display: flex;
     align-items: center;
@@ -77,6 +77,7 @@ line-height: 33.5px;
 const  Heading= styled.h2`
     color:#3C4242;
     font-size : 34px;
+    line-height: 33.5px;
     font-weight:600;`
 const CategoriesContainer=styled.div`
 display: flex;
@@ -96,15 +97,21 @@ display: flex;
 align-items: center;
 justify-content: space-between;`
 const Left =styled.div``
+
 const CategoriesItemsName= styled.p`
-font-weight: 700;
-color: #2a2f2f;
+font-size: 17.88px;
+font-weight: 500;
+color:#191919;
 margin: 0;
 margin-bottom: 3px;
 display:block;
-margin-top:20px;`
+margin-top:20px;
+line-height:27.93px;`
+
 const Text = styled.p`
-font-size: 12px;
+font-weight: 500;
+line-height: 27.93px;
+font-size: 13.41px;
 color: #7f7f7f;
 margin: 0;
 `
