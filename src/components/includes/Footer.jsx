@@ -236,7 +236,7 @@ const MenuItem = styled.ul`
   @media (max-width: 768px) {
     width: calc(50% - 10px);
     }
-  }
+  
 `;
 const MenuList = styled.li``;
 const MenuTitle = styled.h3`
@@ -253,9 +253,9 @@ const MenuTitle = styled.h3`
   }
 `;
 const MenuLink = styled(Link)`
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 42px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 39.04px;
   text-decoration: none;
   color: #f6f6f6;
   @media (max-width: 680px) {
@@ -326,7 +326,8 @@ const Title = styled.h2`
   margin: 0;
   margin-bottom: 40px;
   font-size: 28.58px;
-  font-weight: 600;
+  font-weight: 700;
+  line-height: 61.99px;
   color: #f6f6f6;
   @media (max-width: 680px) {
     text-align: center;
@@ -345,6 +346,7 @@ const P = styled.p`
   color: #ffffff;
   margin: 0px;
   font-size: 10px;
+  line-height: 12px;
   font-weight: 400;
 `;
 const H6 = styled.h6`
@@ -352,12 +354,14 @@ const H6 = styled.h6`
   margin: 0px;
   font-size: 18px;
   font-weight: 400;
+  line-height: 21.6px;
 `;
 const CategorySection = styled.div`
   border-bottom: 1px solid #bebcbd;
 `;
 
 const CategoryWrapper = styled.div`
+padding: 20px 0;
   width: 90%;
   margin: 0 auto;
   max-width: 1280px;
@@ -370,7 +374,8 @@ const CategoryWrapper = styled.div`
 `;
 const CategoryTitle = styled.h2`
   font-size: 28.58px;
-  font-weight: 600;
+  font-weight: 700;
+  line-height: 57.16px;
   color: #f6f6f6;
   @media (max-width: 768px) {
     font-size: 24px;
@@ -400,8 +405,9 @@ const BottomWrapper = styled.div`
 const Info = styled.p`
   margin: 0;
   padding-top: 40px;
+  line-height: 36px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   color: #ffffff;
   @media (max-width: 980px) {

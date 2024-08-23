@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Image1 from "../../assets/images/img-1.jpg";
 import Slider from "react-slick";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function NewArrivals() {
     const settings = {
@@ -39,7 +40,7 @@ function NewArrivals() {
                   
                     <Slider {...settings}>
                         {carditems.map((item) => (
-                            <ArrivalItems>
+                            <ArrivalItems to={`/single/${item.id}`}>
                                 <ArrivalImg>
                                     <img src={item.image} alt="Knitted Joggers" />
                                 </ArrivalImg>
@@ -59,9 +60,19 @@ const Wrapper = styled.div`
      width: 90%;
     max-width: 1280px;
     margin-inline: auto;
+@media (max-width: 680px) {
+   margin-top: 300px;
+}
+@media (max-width: 560px) {
+    margin-top: 300px;
+}
+@media (max-width: 150px) {
+    margin-top: 340px;
+}
 `;
 
-const MainContainer = styled.div``;
+const MainContainer = styled.div`
+`;
 
 const SubContainer = styled.div`
     display: flex;
@@ -82,15 +93,20 @@ const Heading = styled.h2`
     font-weight: 600;
     line-height: 33.5px;
     letter-spacing: 0.16px;
+    @media (max-width: 480px) {
+   font-size: 24px;
+}
 `;
 
 const ArrivalContainer = styled.div`
     padding: 50px 0;
 `;
 
-const ArrivalItems = styled.div`
+const ArrivalItems = styled(Link)`
     text-align: center;  // Center align the text
-    padding: 0 10px;  // Optional: add padding between slides
+    padding: 0 10px; 
+    text-decoration: none;
+    color: #3C4242;
 `;
 
 const ArrivalImg = styled.div`
@@ -108,6 +124,11 @@ const ArrivalItemsName = styled.span`
     letter-spacing: 0.16px;
     display: block;
     margin-top: 20px;
+    @media all and (max-width: 360px) {
+    font-size: 9px;
+    line-height: 10px;
+ 
+}
 `;
 const SliderWrapper = styled.div`
     .slick-prev,

@@ -269,6 +269,7 @@ const SliderContainer = styled.div`
   @media all and (max-width: 480px) {
     background-color: white;
     width: 40%;
+    display: none;
   }
 `;
 
@@ -278,11 +279,10 @@ const SliderImageDiv = styled.div`
   width: 51% !important;
     margin: 8px auto !important;
     display: block !important;
-  
-  /* This is where the img styles should go */
+ 
   img {
     width: 100%;
-    height: 100%; /* Ensure the image fills the div */
+    height: 100%; 
     display: block;
     border-radius: 20px;
   }
@@ -293,14 +293,29 @@ const BannerImageContainer = styled.div`
     @media all and (max-width: 1080px) {
     width:100% ;
   }
+  @media all and (max-width: 480px) {
+    height: 60%;
+    width: 300px;
+
+  }
+  
     `;
 const BannerImage = styled.div`
+display: block;
 
 img {
     width: 100%;
-    height: 784px; /* Ensure the image fills the div */
+    height: 784px; 
     display: block;
-  }`
+  }
+  @media all and (max-width: 480px) {
+    img {
+    width: 100%;
+    height: 280px;
+  }
+
+  }
+ `
 const RightSideSection = styled.div`
     padding:42px;
     @media all and (max-width: 1080px) {
@@ -308,18 +323,21 @@ const RightSideSection = styled.div`
     }
     @media all and (max-width: 780px) {
       margin-left:-98px;}
-      @media all and (max-width: 780px) {
-        margin-left:-76px;
+      @media all and (max-width: 480px) {
+        margin-left:15px;
       }`
 const NavContainer = styled.ul`
     margin-left:-34px;
     display:flex;
-    gap:14px;`
+    gap:14px;
+    `
 const Items = styled.li`
     font-size: 18px;
     color:#807D7E;
     line-height: 21.6px;
     font-weight:500;
+    
+  
     @media all and (max-width: 480px) {
         font-size: 14px;
       }
@@ -452,7 +470,6 @@ const Size = styled.span`
 `;
 const ColorsContainer = styled.div``;
 const ColorsAvailableText = styled.p`
-  font-family: "poppinsmedium";
   font-size: 16px;
   color: #3f4646;
 `;
@@ -562,6 +579,7 @@ const Price = styled.p`
   font-weight: 700;
   line-height: 21.6px;
   margin: 0;
+ 
   @media all and (max-width: 1280px) {
     font-size: 13px;
   }
@@ -573,6 +591,7 @@ const Divider = styled.div`
 const DetailsDiv = styled.div`
   padding-left: 15px;
   margin-top: 40px;
+                                                                                                              
   @media all and (max-width: 1280px) {
     margin-top: 20px;
   }
@@ -611,6 +630,9 @@ const PaymentText = styled.div`
   font-weight: 500;
   line-height: 21.6px;
   color: #3c4242;
+  @media all and (max-width: 1280px) {
+        line-height: 40px;
+      }
 `;
 const SizeFitContainer = styled.div`
   display: flex;

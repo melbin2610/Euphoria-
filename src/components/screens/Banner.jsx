@@ -105,6 +105,9 @@ const Heading = styled.h1`
   letter-spacing: 0.31px;
   margin: 18px 0px 40px 0;
   width: 93%;
+  @media all and (max-width: 1400px) {
+    font-size: 66px;
+  }
   @media all and (max-width: 1080px) {
     font-size: 66px;
   }
@@ -146,6 +149,10 @@ const ButtonContainer = styled.div`
   display: inline-block;
   border-radius: 8px;
   cursor: pointer;
+  @media all and (max-width: 1280px) {
+    padding: 12px 66px;
+   
+  }
   @media all and (max-width: 780px) {
     padding: 8px 17px;
   }`;
@@ -153,7 +160,7 @@ const Button = styled.span`
   font-size: 24px;
   font-weight: 700;
   color: #3c4242;
-  font-weight: 600;
+  line-height: 28.8px;
   @media all and (max-width: 780px) {
     font-size: 12px;
   }`;

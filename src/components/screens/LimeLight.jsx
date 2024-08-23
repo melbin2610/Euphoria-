@@ -3,6 +3,7 @@ import styled from "styled-components";
 import axios from 'axios';
 import { useEffect, useState } from "react";
 import Image1 from "../../assets/images/img-16.jpg"
+import { Link } from 'react-router-dom';
 
 function LimeLight() {
   const [data,setData]=useState([])
@@ -26,7 +27,7 @@ function LimeLight() {
         </Container>
         <CategoriesContainer>
           {data.map((item)=>(
-             <CategoriesItems>
+             <CategoriesItems to={`/single/${item.id}`} >
              <WishlistContainer>
                        <WishlistImg
                          src={
@@ -61,7 +62,8 @@ function LimeLight() {
 const Wrapper = styled.div`
     width: 90%;
     max-width: 1280px;
-    margin-inline: auto;`
+    margin-inline: auto;
+    margin-top: 66px;`
 const LimeLightContainer = styled.div``
 const Container = styled.div`
     display: flex;
@@ -78,17 +80,44 @@ const  Heading= styled.h2`
     color:#3C4242;
     font-size : 34px;
     line-height: 33.5px;
-    font-weight:600;`
+    letter-spacing: 0.32px;
+    font-weight:600;
+    @media (max-width: 480px) {
+   font-size: 24px;
+}`
 const CategoriesContainer=styled.div`
     display: flex;
+    margin-top: 40px;
     justify-content: space-between;
-    padding:38px;
-    max-width:1240px;`    
-const  CategoriesItems= styled.div`
+    max-width:1280px;
+
+    @media all and (max-width: 1280px) {
+      flex-wrap: wrap;
+    }
+      @media all and (max-width: 720px) {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+      
+  }
+    
+    `    
+const  CategoriesItems= styled(Link)`
     position: relative;
     cursor: pointer;
     width: 270px;
-    height: 451px;`
+    height: 451px;
+    text-decoration: none;
+    color:#3C4242;
+    &:focus,
+  &:hover {
+    fill: #797979; // Changes the color on hover
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out, fill 0.2s ease-in-out;
+  }`
 const WishlistContainer = styled.div`
 position: absolute;
 width: 28px;
@@ -130,7 +159,18 @@ const Text = styled.p`
 const PriceContainer= styled.div`
     background-color: #F6F6F6;
     width: 83px;
-    height:37px;`
+    height:37px;
+    @media all and (max-width: 720px) {
+  
+      background-color: #F6F6F6;
+    width: 53px;
+    height: 37px;
+
+    
+}
+    
+    
+    `
 const Price= styled.h5`
     text-align: center;
     font-size: 14px;

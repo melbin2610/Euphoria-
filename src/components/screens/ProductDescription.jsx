@@ -13,7 +13,9 @@ function ProductDescription() {
                     <NavigationHeadingContainer>
                         <NavigationHeading>Description</NavigationHeading>
                         <NavigationHeading>User comments</NavigationHeading>
+                        <CommentBlock>21</CommentBlock>
                         <NavigationHeading>Question & Answer</NavigationHeading>
+                        <Question>4</Question>
                     </NavigationHeadingContainer>
                     <TextContainer>
                         <Text>
@@ -140,6 +142,35 @@ const NavigationHeading = styled.div`
     font-size: 14px;
   }
 `;
+const CommentBlock=styled.div`
+    background-color: blueviolet;
+    width:20px;
+    height:20px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 10px;
+  color: #FFFFFF;
+  line-height: 18px;
+  font-family: 500;
+  @media (max-width: 480px) {
+   display: none;
+  }
+    `;
+const Question=styled.div`
+  background-color: #3c4242;
+    width:20px;
+    height:20px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 10px;
+  color: #FFFFFF;
+  line-height: 18px;
+  font-family: 500;
+  @media (max-width: 480px) {
+   display: none;
+  }
+`    
+  
 
 const TextContainer = styled.div``;
 const Text = styled.p`

@@ -127,7 +127,10 @@ const  Heading= styled.h2`
     font-size : 28px;
     line-height: 33.5px;
     letter-spacing: 0.32px;
-    font-weight:600;`
+    font-weight:600;
+    @media (max-width: 480px) {
+   font-size: 24px;
+}`
 const CategoriesContainer=styled.div`
     display: flex;
     justify-content: space-between;
@@ -142,7 +145,13 @@ const  CategoriesItems= styled.div`
     position: relative;
     cursor: pointer;
     width: 270px;
-    height: 451px;`
+    height: 451px;
+    &:focus,
+  &:hover {
+    fill: #797979; // Changes the color on hover
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out, fill 0.2s ease-in-out;
+  }`
 const WishlistContainer = styled.div`
 position: absolute;
 width: 27px;

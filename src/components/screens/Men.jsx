@@ -84,21 +84,54 @@ line-height: 33.5px;
 const  Heading= styled.h2`
     color:#3C4242;
     font-size : 34px;
-    font-weight:600;`
+    font-weight:600;
+    line-height: 33.5px;
+    letter-spacing: 0.32px;
+    @media all and (max-width: 480px) {
+
+     font-size :25px;
+  }`
 const CategoriesContainer=styled.div`
     display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-            grid-template-rows: repeat(2, 1fr); /* 2 equal rows, each 100px high */
-            gap: 10px; 
-           
-   `
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 equal rows, each 100px high */
+    gap: 10px;
+    @media all and (max-width: 1280px) {
+      grid-template-columns: repeat(3, 1fr); /* 4 equal columns */
+      grid-template-rows: repeat(2, 1fr); /* 2 equal rows, each 100px high */}
+    @media all and (max-width: 920px) {
+      grid-template-columns: repeat(2, 1fr); /* 4 equal columns */
+      grid-template-rows: repeat(2, 1fr); /* 2 equal rows, each 100px high */
+    
+  } 
+  @media all and (max-width: 640px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }  
+  `
 const  CategoriesItems= styled(Link)`
     width: 270px;
     height: 451px;
-    margin-top: 40px;`
+    margin-top: 40px;
+    text-decoration: none;
+    color:#2A2F2F;
+    &:focus,
+  &:hover {
+    fill: #797979; // Changes the color on hover
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out, fill 0.2s ease-in-out;
+  }
+    
+    `
 const CategoriesImg= styled.div`
     display: block;
     width:100%;
+    text-decoration: none;
+    color: #000;
+
 ` 
 const Contents=styled.div`
     text-align: left;
@@ -110,7 +143,7 @@ const CategoriesItemsName= styled.p`
     font-weight: 700;
     font-size: 17.88px;
     line-height: 27.93px;
-    letter-spacing: .064px;;
+    letter-spacing: -0.64px;
     color: #2a2f2f;
     margin: 0;
     margin-bottom: 3px;
@@ -120,6 +153,7 @@ const Text = styled.p`
     font-size: 13.41px;
     font-weight: 500;
     line-height: 27.93px;
+    letter-spacing: -0.64px;
     color: #7f7f7f;
     margin: 0;
 `

@@ -112,6 +112,8 @@ const Wrapper = styled.div`
   width: 90%;
   max-width: 1440px;
   margin: 0 auto;
+  padding: 10px 0;
+
 `;
 const Headers = styled.div`
   display: flex;
@@ -143,18 +145,22 @@ const Categories = styled.div`
   @media all and (max-width: 1080px) {
     gap: 24px;
   }
-  @media all and (max-width: 640px) {
-    gap: 9px;
-  }
-  @media all and (max-width: 540px) {
+  @media all and (max-width: 820px) {
     display: none;
   }
+ 
+ 
 `;
 const Items = styled.li`
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   color: #807d7e;
+  line-height: 26.4px;
+  @media all and (max-width: 1400px) {
+    font-size: 15px;
+  }
+
   @media all and (max-width: 1080px) {
     font-size: 15px;
   }
@@ -169,42 +175,47 @@ const Items = styled.li`
 const RightDiv = styled.div`
   display: flex;
   align-items: center;
-  gap: 11rem;
+
   @media all and (max-width: 1080px) {
     gap: 5px;
   }
 `;
 const Form = styled.div`
   display: flex;
+  margin-right: 43px;
+  @media all and (max-width: 820px) {
+    margin-right:30px;
+  }
+
 `;
 const SearchContainer = styled.div`
   border-radius: 8px;
   background-color: #F6F6F6;
   display: flex;
   align-items: center;
-  padding: 12px 20px;
+  padding: 6px 20px;
   gap: 12px;
   @media all and (max-width: 1280px) {
-    background-color: white;
-    padding: 12px 0;
+    
+  
   }
   @media all and (max-width: 1080px) {
     gap: 0;
   }
-  @media all and (max-width: 540px) {
+  /* @media all and (max-width: 540px) {
     padding: 12px 50px;
-  }
-  @media all and (max-width: 540px) {
+  } */
+  /* @media all and (max-width: 540px) {
     gap: 5px;
-  }
+  } */
 `;
 const SearchImgContainer = styled.div`
   @media all and (max-width: 1080px) {
     width: 12px;
   }
-  @media all and (max-width: 540px) {
+  /* @media all and (max-width: 540px) {
     width: 17px;
-  }
+  } */
 `;
 const SearchImage = styled.img`
   display: block;
@@ -217,7 +228,7 @@ const StyledInput = styled.input`
   font-size: 14px;
   color: #807d7e;
   @media all and (max-width: 1280px) {
-    background-color: white;
+  
     font-size: 12px;
   }
   @media all and (max-width: 1080px) {
@@ -226,9 +237,9 @@ const StyledInput = styled.input`
   @media all and (max-width: 640px) {
     width: 70px;
   }
-  @media all and (max-width: 540px) {
+  /* @media all and (max-width: 540px) {
     width: 100%;
-  }
+  } */
 `;
 const RightContainer = styled.div`
   display: flex;
@@ -237,16 +248,19 @@ const RightContainer = styled.div`
   @media all and (max-width: 1280px) {
     gap: 1rem;
   }
-  @media all and (max-width: 640px) {
+  @media all and (max-width: 480px  ) {
     display: none;
   }
 `;
 const ImageContainer = styled.div`
   background-color: #F6F6F6;
   cursor: pointer;
-  width: 18px;
+  padding: 14px;
+  border-radius: 8px;
   @media all and (max-width: 1280px) {
-    width: 16px;
+    width: 35px;
+    padding: 10px;
+
   }
 `;
 const Wishlist = styled.img`
@@ -264,7 +278,7 @@ const Cart = styled.img`
 
 const MenuBar = styled.div`
   display: none;
-  @media all and (max-width: 640px) {
+  @media all and (max-width: 820px) {
     display: block;
   }
 `;

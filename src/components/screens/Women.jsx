@@ -78,19 +78,55 @@ const  Heading= styled.h2`
     color:#3C4242;
     font-size : 34px;
     line-height: 33.5px;
-    font-weight:600;`
+    font-weight:600;
+    letter-spacing:0.32px;
+    @media all and (max-width: 480px) {
+      font-size : 25px;
+ 
+ 
+ flex-wrap: wrap;
+}
+    
+    
+    `
 const CategoriesContainer=styled.div`
 display: flex;
+margin-top: 40px;
 justify-content: space-between;
-padding:50px;
-max-width:1240px;`
+/* padding:50px; */
+max-width:1280px;
+@media all and (max-width: 1280px) {
+ 
+ 
+  flex-wrap: wrap;
+}
+@media all and (max-width: 720px) {
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+      
+}
+
+
+
+`
 const  CategoriesItems= styled(Link)`
 width: 270px;
-height: 451px;`
+height: 451px;
+text-decoration: none;
+color:#191919;
+&:focus,
+  &:hover {
+    fill: #797979; // Changes the color on hover
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out, fill 0.2s ease-in-out;
+  }`
 const CategoriesImg= styled.div`
 display: block;
-width:100%;
-` 
+width:100%;` 
 const Contents=styled.div`
 text-align: left;
 display: flex;
@@ -106,6 +142,7 @@ margin: 0;
 margin-bottom: 3px;
 display:block;
 margin-top:20px;
+letter-spacing: -0.64px;
 line-height:27.93px;`
 
 const Text = styled.p`
@@ -114,6 +151,7 @@ line-height: 27.93px;
 font-size: 13.41px;
 color: #7f7f7f;
 margin: 0;
+letter-spacing: -0.64px;
 `
 const ArrowContainer= styled.div`
 width: 15px;`
