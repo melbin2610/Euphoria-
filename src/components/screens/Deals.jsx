@@ -60,7 +60,7 @@ const DealsLeft = styled.div`
     flex-direction: column;
     justify-content: left;
     text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 10px 0px #00000066;
     border-radius: 12px;
     @media all and (max-width: 1280px) {
  
@@ -132,7 +132,7 @@ const DealsRight = styled.div`
     flex-direction: column;
     justify-content: left;
     text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 10px 0px #00000066;
     border-radius: 12px;
     @media all and (max-width: 1280px) {
  

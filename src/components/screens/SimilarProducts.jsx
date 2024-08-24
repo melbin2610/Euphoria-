@@ -23,7 +23,7 @@ function SimilarProducts() {
                   />
                 </WishlistContainer>
             <CategoriesImg>
-                <img src={Image1} alt="image" />  
+                <img src={Image1} alt="image" style={{ display: 'block', width: '100%' }} />  
             </CategoriesImg>
             <Contents>
             <Left>
@@ -41,11 +41,11 @@ function SimilarProducts() {
                     src={
                       require("../../assets/images/wishlist.svg")
                         .default
-                    }
+                    } style={{ display: 'block', width: '100%' }}
                   />
                 </WishlistContainer>
             <CategoriesImg>
-                <img src={Image2} alt="image" />  
+                <img src={Image2} alt="image" style={{ display: 'block', width: '100%' }} />  
             </CategoriesImg>
             <Contents>
             <Left>
@@ -67,7 +67,7 @@ function SimilarProducts() {
                   />
                 </WishlistContainer>
             <CategoriesImg>
-                <img src={Image3} alt="image" />  
+                <img src={Image3} alt="image" style={{ display: 'block', width: '100%' }}/>  
             </CategoriesImg>
             <Contents>
             <Left>
@@ -89,7 +89,7 @@ function SimilarProducts() {
                   />
                 </WishlistContainer>
             <CategoriesImg>
-                <img src={Image4} alt="image" />  
+                <img src={Image4} alt="image"  style={{ display: 'block', width: '100%' }}/>  
             </CategoriesImg>
             <Contents>
             <Left>
@@ -136,10 +136,70 @@ const CategoriesContainer=styled.div`
     justify-content: space-between;
     padding:50px;
     max-width:1280px;
+    @media all and (max-width: 1400px) {
+      padding: 20px 0px;
+    
+  
+  }
     @media all and (max-width: 1280px) {
-    flex-wrap: wrap;}
-    @media all and (max-width: 1280px) {
-      padding:5px;}
+      padding:5px;
+      flex-wrap: wrap;
+    width: 93%;
+    margin-top: 20px;
+}
+@media all and (max-width: 1080px) {
+
+    width: 100%;
+
+}
+@media all and (max-width: 980px) {
+
+  flex-wrap: wrap;
+    width: 79%;
+    margin: 56px auto;
+
+
+}
+@media all and (max-width: 860px) {
+
+  flex-wrap: wrap;
+  width: 83%;
+    margin: 56px auto;
+
+
+
+}
+@media all and (max-width: 768px) {
+
+  width: 100%;
+
+
+
+
+}
+@media all and (max-width: 680px) {
+
+  width: 58%;
+  margin: 51px auto;
+
+
+
+
+}    
+
+@media all and (max-width: 540px) {
+
+width: 90%;
+margin: 51px auto;
+
+
+
+
+} 
+
+
+    
+    
     `;    
 const  CategoriesItems= styled.div`
     position: relative;

@@ -104,7 +104,7 @@ const Heading = styled.h1`
   line-height: 93.62px;
   letter-spacing: 0.31px;
   margin: 18px 0px 40px 0;
-  width: 93%;
+  width: 72%;
   @media all and (max-width: 1400px) {
     font-size: 66px;
   }

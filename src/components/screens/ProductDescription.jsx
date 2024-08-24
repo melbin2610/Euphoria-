@@ -90,11 +90,17 @@ const Wrapper = styled.div`
   padding: 60px 0;
   display: flex;
   gap: 30px;
+  @media (max-width: 1400px) {
+ 
+    
+  }
   @media (max-width: 1080px) {
     flex-direction: column;
+
   }
   @media (max-width: 680px) {
-    padding-top: 0;
+    padding-top: 55px;
+
   }
 `;
 
@@ -119,6 +125,9 @@ const Heading = styled.h3`
   @media (max-width: 680px) {
     font-size: 28px;
   }
+  @media (max-width: 680px) {
+    font-size: 18px;
+  }
 `;
 const DescrptionContainer = styled.div``;
 
@@ -135,12 +144,18 @@ const NavigationHeading = styled.div`
   font-weight: 500;
   line-height: 21.6px;
   font-size: 18px;
-  @media (max-width: 680px) {
-    font-size: 16px;
+  @media (max-width: 1280px) {
+    font-size: 12px;
   }
-  @media (max-width: 320px) {
+  @media (max-width: 1080px) {
+    font-size: 18px;
+  }
+  @media (max-width: 680px) {
     font-size: 14px;
   }
+  @media (max-width: 540px) {
+  font-size: 12px;
+}
 `;
 const CommentBlock=styled.div`
     background-color: blueviolet;
@@ -179,9 +194,14 @@ const Text = styled.p`
   line-height: 25px;
   letter-spacing: 0.02em;
   color: #807d7e;
-  @media (max-width: 680px) {
+  @media (max-width: 1280px) {
     line-height: 22px;
-    font-size: 12px;
+    font-size: 13px;
+  }
+  @media (max-width: 1080px) {
+    line-height: 22px;
+        font-size: 15px;
+        width: 69%;
   }
 `;
 const TableWrapper = styled.div`
@@ -195,6 +215,11 @@ const ProductDetails = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   border-radius: 12px;
+  @media (max-width: 1400px) {
+    width: 515px;
+    
+  }
+
   @media (max-width: 680px) {
     width: 100%;
   }
@@ -227,8 +252,11 @@ const Category = styled.div`
   line-height: 16px;
   letter-spacing: 0.02em;
   color: #807d7e;
-  @media (max-width: 320px) {
-    font-size: 14px;
+  @media (max-width: 360px) {
+    font-size: 12px;
+    @media (max-width: 320px) {
+    font-size: 8px;
+  }
   }
 `;
 const Value = styled.div`
@@ -237,8 +265,8 @@ const Value = styled.div`
   line-height: 16px;
   letter-spacing: 0.02em;
   color: #3c4242;
-  @media (max-width: 320px) {
-    font-size: 12px;
+  @media (max-width: 1280px) {
+    font-size: 15px;
   }
 `;
 

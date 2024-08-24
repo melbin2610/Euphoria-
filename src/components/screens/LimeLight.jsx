@@ -112,12 +112,8 @@ const  CategoriesItems= styled(Link)`
     height: 451px;
     text-decoration: none;
     color:#3C4242;
-    &:focus,
-  &:hover {
-    fill: #797979; // Changes the color on hover
-    transform: scale(1.1);
-    transition: transform 0.2s ease-in-out, fill 0.2s ease-in-out;
-  }`
+    
+ `
 const WishlistContainer = styled.div`
 position: absolute;
 width: 28px;
@@ -160,6 +156,7 @@ const PriceContainer= styled.div`
     background-color: #F6F6F6;
     width: 83px;
     height:37px;
+    border-radius: 9.85px;
     @media all and (max-width: 720px) {
   
       background-color: #F6F6F6;

@@ -7,16 +7,40 @@ import { Link } from "react-router-dom";
 
 function NewArrivals() {
     const settings = {
-      dots: false,
-      nextArrow: <SampleNextArrow />,
-      prevArrow: <SamplePrevArrow />,
+        dots: false,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />,
         infinite: true,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
         autoplay: false,
         autoplaySpeed: 3000,
-    };
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2,
+            },
+          },
+          {
+            breakpoint: 700,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 400,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      };
+      
 
     const[carditems,setCarditems]=useState([])
     useEffect(() => {
@@ -78,6 +102,7 @@ const SubContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 15px;
+
 `;
 
 const BlueBlock = styled.div`
@@ -107,7 +132,9 @@ const ArrivalItems = styled(Link)`
     padding: 0 10px; 
     text-decoration: none;
     color: #3C4242;
-`;
+
+`
+;
 
 const ArrivalImg = styled.div`
     width: 100%;
@@ -165,6 +192,7 @@ const SliderWrapper = styled.div`
     .slick-next::before {
         content: "→"; // Customize the arrow icon
     }
+    
 `;
 const CustomArrow = styled.div`
   position: absolute;

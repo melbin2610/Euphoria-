@@ -118,12 +118,7 @@ width: 270px;
 height: 451px;
 text-decoration: none;
 color:#191919;
-&:focus,
-  &:hover {
-    fill: #797979; // Changes the color on hover
-    transform: scale(1.1);
-    transition: transform 0.2s ease-in-out, fill 0.2s ease-in-out;
-  }`
+`
 const CategoriesImg= styled.div`
 display: block;
 width:100%;` 

@@ -31,7 +31,7 @@ function ProductDetails({data}) {
             data.images.map((item)=>(
               <SliderImageDiv>
 
-              <img src={item} alt="image" />
+              <img src={item} alt="image" style={{ display: 'block', width: '100%' }} />
             </SliderImageDiv>
 
             ))
@@ -41,16 +41,16 @@ function ProductDetails({data}) {
         <MainImageContainer>
         <BannerImageContainer>
           <BannerImage>
-            <img src={data.image} alt="image" />
+            <img src={data.image} alt="image" style={{ display: 'block', width: '100%' }} />
           </BannerImage>
         </BannerImageContainer>
         
         <RightSideSection>
           <NavContainer>
             <Items>Shop</Items>
-            <Items> <img src={Arrow} alt="image" /></Items>
+            <Items> <img src={Arrow} alt="image" style={{ display: 'block', width: '100%' }} /></Items>
             <Items>{data.category}</Items>
-            <Items><img src={Arrow} alt="image" /></Items>
+            <Items><img src={Arrow} alt="image" style={{ display: 'block', width: '100%' }} /></Items>
             <Items>{data.title}</Items>
           </NavContainer>
           <HeadingContainer>
@@ -209,21 +209,35 @@ const Arrowimg = styled.img`
  
 `;
 const ArrowContainer = styled.div`
- 
+ box-shadow: 0.76px 0.76px 3.02px 0px #0000000A;
+
  background: gray;
  padding: 10px;
   border-radius: 50%;
-  width: 12px;
-  height: 12px;
+  width: 21.17px;
+  height: 21.17px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   position: relative;
   top: 50px;
-  left: 95px;
+  left: 100px;
+  @media all and (max-width: 1280px) {
+    left: 40px;
+  } 
+  @media all and (max-width: 1080px) {
+    left: 136px;
+  } 
+  @media (max-width: 860px) {
+    left: 103px;
+    display: none;
+
+}
 `;
 const ArrowContainerup = styled.div`
+box-shadow: 0.76px 0.76px 3.02px 0px #0000000A;
+
     background-color: white;
     padding: 10px;
   border-radius: 50%;
@@ -235,17 +249,42 @@ const ArrowContainerup = styled.div`
   cursor: pointer;
   position: relative;
   top: 284px;
-  left: 95px;
+  left: 100px;
   transform: rotate(180deg);
+  @media all and (max-width: 1280px) {
+    left: 40px;
+  } 
+  @media all and (max-width: 1080px) {
+    left: 136px;
+  } 
+  @media (max-width: 860px) {
+    left: 103px;
+    display: none;
+
+}
 `;
 const Wrapper = styled.div`
   width: 90%;
   /* max-width: 1280px; */
   margin-inline: auto;
+  @media all and (max-width: 1280px) {
+margin-top: 30px;
+  } 
+
+
 `;
 
 const MainContainer = styled.div`
     display:flex;
+
+    @media all and (max-width: 768px) {
+margin-top: 30px;
+display: block;
+  } 
+    
+    
+    
+    
     `;
  const MainImageContainer = styled.div`
    display: flex;
@@ -254,7 +293,7 @@ const MainContainer = styled.div`
   }   `  ; 
 
 const SliderContainer = styled.div`
-  background-color:#f6f6f6;
+  /* background-color:#F6F6F6; */
   width: 281px;
   height: 784px;
   display: flex;
@@ -266,7 +305,7 @@ const SliderContainer = styled.div`
     background-color: white;
     width: 35%;
   }
-  @media all and (max-width: 480px) {
+  @media all and (max-width: 860px) {
     background-color: white;
     width: 40%;
     display: none;
@@ -274,14 +313,14 @@ const SliderContainer = styled.div`
 `;
 
 const SliderImageDiv = styled.div`
-  width: 64px;
+  width: 64 px;
   height: 64px;
   width: 51% !important;
     margin: 8px auto !important;
     display: block !important;
  
   img {
-    width: 100%;
+    width: 57%;
     height: 100%; 
     display: block;
     border-radius: 20px;
@@ -294,10 +333,11 @@ const BannerImageContainer = styled.div`
     width:100% ;
   }
   @media all and (max-width: 480px) {
-    height: 60%;
+
     width: 300px;
 
   }
+ 
   
     `;
 const BannerImage = styled.div`
@@ -308,28 +348,43 @@ img {
     height: 784px; 
     display: block;
   }
-  @media all and (max-width: 480px) {
+  @media all and (max-width: 1280px) {
     img {
-    width: 100%;
-    height: 280px;
+    width: 80%;
+    height: 700px;
+  }
+  
   }
 
+  @media all and (max-width: 768px) {
+    width: 80%;
+    height: 200px;
+  margin: 0 auto;
+  
   }
  `
 const RightSideSection = styled.div`
     padding:42px;
     @media all and (max-width: 1080px) {
-    margin-left:-257px;
+      padding:0;
+   
     }
-    @media all and (max-width: 780px) {
-      margin-left:-98px;}
+    @media all and (max-width: 860px) {
+      padding:0;
+  }
       @media all and (max-width: 480px) {
-        margin-left:15px;
+    
       }`
 const NavContainer = styled.ul`
     margin-left:-34px;
     display:flex;
     gap:14px;
+
+    @media all and (max-width: 1400px) {
+  
+    align-items: center;
+    }
+
     `
 const Items = styled.li`
     font-size: 18px;
@@ -337,7 +392,9 @@ const Items = styled.li`
     line-height: 21.6px;
     font-weight:500;
     
-  
+    @media all and (max-width: 1280px) {
+        font-size: 14px;
+      }
     @media all and (max-width: 480px) {
         font-size: 14px;
       }
@@ -523,6 +580,7 @@ const BuyContainer = styled.div`
     flex-wrap: wrap;
     flex-direction: column;
     align-items: baseline;
+    margin-left: 43px;
     gap: 10px;
   }
 `;
@@ -535,10 +593,13 @@ const AddCartDiv = styled.div`
     padding: 10px 35px;
   }
   @media all and (max-width: 780px) {
-    padding: 8px 35px;
+    padding: 14px 35px;
   }
   @media all and (max-width: 480px) {
-    padding: 10px 20px;
+    padding: 14px 20px;
+  }
+  @media all and (max-width: 360px) {
+    padding: 14px 13px;
   }
 `;
 const CartContainer = styled.div`
@@ -562,7 +623,7 @@ const CartText = styled.p`
     font-size: 13px;
   }
   @media all and (max-width: 780px) {
-    font-size: 8px;
+    font-size: 12px;
   }
 `;
 const PriceDiv = styled.div`
@@ -630,6 +691,9 @@ const PaymentText = styled.div`
   font-weight: 500;
   line-height: 21.6px;
   color: #3c4242;
+  @media all and (max-width: 1400px) {
+    font-size: 16px;
+  }
   @media all and (max-width: 1280px) {
         line-height: 40px;
       }
@@ -652,6 +716,11 @@ const ShippingandReturn = styled.div`
   display: flex;
   align-items: center;
   gap: 92px;
+  @media all and (max-width: 1400px) {
+    gap: 108px
+
+ 
+  }
   @media all and (max-width: 1280px) {
     flex-wrap: wrap;
     flex-direction: column;
@@ -667,6 +736,9 @@ const ShippingContainer = styled.div`
 const ShippingsImgContainer = styled.div`
   width: 16px;
   margin-right: 29px;
+  @media all and (max-width: 1400px) {
+    width: 24px;
+  }
 `;
 const ShippingsImg = styled.img`
   display: block;
